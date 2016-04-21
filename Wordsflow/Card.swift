@@ -9,13 +9,21 @@
 import Foundation
 
 class Card {
+    
+    let front: String
+    let back: String
+
     var easinessFactor: Double
     var interval: Int
     var repetitions: Int
 
     init() {
+        front = "Front"
+        back = "Back"
+
         easinessFactor = 2.5
         repetitions = 0
         interval = 0
     }
+
 }

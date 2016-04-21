@@ -29,25 +29,31 @@ class CardsViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 2
+        return 1 + cards.count
     }
 
 
     override func tableView(tableView: UITableView,
                             cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let identifier = (indexPath.row == 0 ? "SearchCell" : "CardCell")
-        let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        if indexPath.row == 0 {
+            return configureSearchBar(forIndexPath: indexPath)
+        } else {
+            return configureCardCell(forIndexPath: indexPath)
+        }
+    }
+    
+    // MARK: - Helpers
+    
+    private func configureSearchBar(forIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return tableView.dequeueReusableCellWithIdentifier("SearchCell", forIndexPath: indexPath)
+    }
+    
+    private func configureCardCell(forIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("CardCell", forIndexPath: indexPath)
+        let card = cards[indexPath.row - 1]
+        cell.textLabel?.text = card.front
         return cell
     }
 
