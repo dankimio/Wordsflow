@@ -9,6 +9,8 @@
 import UIKit
 
 class CardsViewController: UITableViewController {
+    
+    var cards: [Card]!
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		371650DE1CC9877100897E32 /* DeckDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371650DD1CC9877100897E32 /* DeckDetailViewController.swift */; };
 		37703F8C1CC94A1E00A96980 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37703F8B1CC94A1E00A96980 /* AppDelegate.swift */; };
 		37703F911CC94A1E00A96980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37703F8F1CC94A1E00A96980 /* Main.storyboard */; };
 		37703F931CC94A1E00A96980 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37703F921CC94A1E00A96980 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		371650DD1CC9877100897E32 /* DeckDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckDetailViewController.swift; sourceTree = "<group>"; };
 		37703F881CC94A1E00A96980 /* Wordsflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordsflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37703F8B1CC94A1E00A96980 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37703F901CC94A1E00A96980 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			children = (
 				37703F9D1CC94B4100A96980 /* DecksViewController.swift */,
 				37703F9F1CC9540F00A96980 /* CardsViewController.swift */,
+				371650DD1CC9877100897E32 /* DeckDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				37703F8C1CC94A1E00A96980 /* AppDelegate.swift in Sources */,
 				37703FA21CC9651E00A96980 /* Scheduler.swift in Sources */,
 				37703F9E1CC94B4100A96980 /* DecksViewController.swift in Sources */,
+				371650DE1CC9877100897E32 /* DeckDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

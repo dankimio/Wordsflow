@@ -86,14 +86,22 @@ class DecksViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "ShowCards":
+                let cardsViewController = segue.destinationViewController as! DeckDetailViewController
+                let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)!
+                cardsViewController.deck = decks[indexPath.row]
+            default:
+                return
+            }
+        }
     }
-    */
 
 }
