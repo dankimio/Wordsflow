@@ -16,6 +16,7 @@
 		37703FA01CC9540F00A96980 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37703F9F1CC9540F00A96980 /* CardsViewController.swift */; };
 		37703FA21CC9651E00A96980 /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37703FA11CC9651E00A96980 /* Scheduler.swift */; };
 		37703FA41CC9653500A96980 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37703FA31CC9653500A96980 /* Card.swift */; };
+		37703FA91CC9762B00A96980 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37703FA81CC9762B00A96980 /* Deck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		37703F9F1CC9540F00A96980 /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		37703FA11CC9651E00A96980 /* Scheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
 		37703FA31CC9653500A96980 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		37703FA81CC9762B00A96980 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			children = (
 				37703FA11CC9651E00A96980 /* Scheduler.swift */,
 				37703FA31CC9653500A96980 /* Card.swift */,
+				37703FA81CC9762B00A96980 /* Deck.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37703FA91CC9762B00A96980 /* Deck.swift in Sources */,
 				37703FA01CC9540F00A96980 /* CardsViewController.swift in Sources */,
 				37703FA41CC9653500A96980 /* Card.swift in Sources */,
 				37703F8E1CC94A1E00A96980 /* ViewController.swift in Sources */,
