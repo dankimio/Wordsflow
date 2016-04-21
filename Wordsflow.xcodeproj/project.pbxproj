@@ -62,18 +62,42 @@
 		37703F8A1CC94A1E00A96980 /* Wordsflow */ = {
 			isa = PBXGroup;
 			children = (
-				37703F8B1CC94A1E00A96980 /* AppDelegate.swift */,
+				37703FA51CC975BC00A96980 /* Controllers */,
+				37703FA61CC975CC00A96980 /* Models */,
+				37703FA71CC975DD00A96980 /* Supporting Files */,
+			);
+			path = Wordsflow;
+			sourceTree = "<group>";
+		};
+		37703FA51CC975BC00A96980 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				37703F8D1CC94A1E00A96980 /* ViewController.swift */,
+				37703F9D1CC94B4100A96980 /* DecksViewController.swift */,
+				37703F9F1CC9540F00A96980 /* CardsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		37703FA61CC975CC00A96980 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				37703FA11CC9651E00A96980 /* Scheduler.swift */,
+				37703FA31CC9653500A96980 /* Card.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		37703FA71CC975DD00A96980 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				37703F8B1CC94A1E00A96980 /* AppDelegate.swift */,
 				37703F8F1CC94A1E00A96980 /* Main.storyboard */,
 				37703F921CC94A1E00A96980 /* Assets.xcassets */,
 				37703F941CC94A1E00A96980 /* LaunchScreen.storyboard */,
 				37703F971CC94A1E00A96980 /* Info.plist */,
-				37703F9D1CC94B4100A96980 /* DecksViewController.swift */,
-				37703F9F1CC9540F00A96980 /* CardsViewController.swift */,
-				37703FA11CC9651E00A96980 /* Scheduler.swift */,
-				37703FA31CC9653500A96980 /* Card.swift */,
 			);
-			path = Wordsflow;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
