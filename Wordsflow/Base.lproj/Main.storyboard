@@ -5,24 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Wordsflow" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="60" y="346"/>
-        </scene>
         <!--Decks View Controller-->
         <scene sceneID="8ot-Je-TUP">
             <objects>
@@ -65,13 +47,15 @@
                             <outlet property="delegate" destination="irW-eM-TL6" id="jci-Af-OC8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="TJA-Y6-sjl"/>
+                    <navigationItem key="navigationItem" id="TJA-Y6-sjl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nQB-sb-K8R"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ywi-sz-BMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1509" y="1174"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="I6v-Tc-jqe">
             <objects>
                 <viewController id="YHc-Ws-0WW" sceneMemberID="viewController">
@@ -100,6 +84,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="2Ru-lo-WGr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="muj-N6-JRF"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3T-Yh-xkX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,7 +147,6 @@
         <!--Cards View Controller-->
         <scene sceneID="pca-PM-N8C">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kZK-7H-7yU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="8ab-dl-eAs" customClass="CardsViewController" customModule="Wordsflow" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="s3x-39-q1u">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -196,6 +182,7 @@
                         </connections>
                     </tableView>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kZK-7H-7yU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2885" y="1952"/>
         </scene>

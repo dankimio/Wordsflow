@@ -9,7 +9,7 @@
 import Foundation
 
 class Deck {
-    
+
     let name: String
     
     var cards = [Card]()
@@ -17,5 +17,5 @@ class Deck {
     init(name: String) {
         self.name = name
     }
-    
+
 }

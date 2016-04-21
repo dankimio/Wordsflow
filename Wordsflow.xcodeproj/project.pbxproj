@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		37703F8C1CC94A1E00A96980 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37703F8B1CC94A1E00A96980 /* AppDelegate.swift */; };
-		37703F8E1CC94A1E00A96980 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37703F8D1CC94A1E00A96980 /* ViewController.swift */; };
 		37703F911CC94A1E00A96980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37703F8F1CC94A1E00A96980 /* Main.storyboard */; };
 		37703F931CC94A1E00A96980 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37703F921CC94A1E00A96980 /* Assets.xcassets */; };
 		37703F961CC94A1E00A96980 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37703F941CC94A1E00A96980 /* LaunchScreen.storyboard */; };
@@ -22,7 +21,6 @@
 /* Begin PBXFileReference section */
 		37703F881CC94A1E00A96980 /* Wordsflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordsflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37703F8B1CC94A1E00A96980 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		37703F8D1CC94A1E00A96980 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		37703F901CC94A1E00A96980 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37703F921CC94A1E00A96980 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37703F951CC94A1E00A96980 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 		37703FA51CC975BC00A96980 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				37703F8D1CC94A1E00A96980 /* ViewController.swift */,
 				37703F9D1CC94B4100A96980 /* DecksViewController.swift */,
 				37703F9F1CC9540F00A96980 /* CardsViewController.swift */,
 			);
@@ -177,7 +174,6 @@
 				37703FA91CC9762B00A96980 /* Deck.swift in Sources */,
 				37703FA01CC9540F00A96980 /* CardsViewController.swift in Sources */,
 				37703FA41CC9653500A96980 /* Card.swift in Sources */,
-				37703F8E1CC94A1E00A96980 /* ViewController.swift in Sources */,
 				37703F8C1CC94A1E00A96980 /* AppDelegate.swift in Sources */,
 				37703FA21CC9651E00A96980 /* Scheduler.swift in Sources */,
 				37703F9E1CC94B4100A96980 /* DecksViewController.swift in Sources */,
@@ -330,6 +326,7 @@
 				37703F9C1CC94A1E00A96980 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,6 +9,8 @@
 import UIKit
 
 class DecksViewController: UITableViewController {
+    
+    var decks: [Deck]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,14 @@ class DecksViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        decks = [Deck]()
+        
+        for i in 1...5 {
+            let deck = Deck(name: "Deck \(i)")
+            deck.cards.append(Card())
+            decks.append(deck)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,13 +38,15 @@ class DecksViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return decks.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("DeckCell", forIndexPath: indexPath)
 
         // Configure the cell...
+        let deck = decks[indexPath.row]
+        cell.textLabel?.text = deck.name
 
         return cell
     }
