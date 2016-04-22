@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Decks-->
@@ -21,25 +22,41 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="87"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PPf-mg-A57" customClass="IndicatorView" customModule="Wordsflow" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="34" width="12" height="12"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PPf-mg-A57" customClass="IndicatorView" customModule="Wordsflow" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="24" width="12" height="12"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="12" id="nrL-lV-HFe"/>
+                                                <constraint firstAttribute="height" constant="12" id="pmK-f9-gNe"/>
+                                            </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8x-dO-lje">
-                                            <rect key="frame" x="44" y="22" width="34" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8x-dO-lje">
+                                            <rect key="frame" x="32" y="18" width="560" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dP1-LW-8WM">
-                                            <rect key="frame" x="44" y="51" width="59" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dP1-LW-8WM">
+                                            <rect key="frame" x="32" y="48" width="560" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="dP1-LW-8WM" secondAttribute="trailing" id="0Qt-gb-u1r"/>
+                                        <constraint firstItem="D8x-dO-lje" firstAttribute="top" secondItem="qQV-Av-W4W" secondAttribute="topMargin" constant="10" id="DcT-Ig-Fje"/>
+                                        <constraint firstItem="dP1-LW-8WM" firstAttribute="leading" secondItem="qQV-Av-W4W" secondAttribute="leadingMargin" constant="24" id="KAv-lx-IXc"/>
+                                        <constraint firstItem="PPf-mg-A57" firstAttribute="leading" secondItem="qQV-Av-W4W" secondAttribute="leadingMargin" id="Kyn-Si-FKi"/>
+                                        <constraint firstItem="PPf-mg-A57" firstAttribute="top" secondItem="qQV-Av-W4W" secondAttribute="topMargin" constant="16" id="LL3-Q8-eBD"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="D8x-dO-lje" secondAttribute="trailing" id="QgR-YE-hL9"/>
+                                        <constraint firstItem="D8x-dO-lje" firstAttribute="leading" secondItem="qQV-Av-W4W" secondAttribute="leadingMargin" constant="24" id="dxl-v7-XP9"/>
+                                        <constraint firstItem="dP1-LW-8WM" firstAttribute="top" secondItem="D8x-dO-lje" secondAttribute="bottom" constant="8" id="rOw-aX-dzM"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="descriptionLabel" destination="dP1-LW-8WM" id="WQK-lw-yD9"/>
+                                    <outlet property="nameLabel" destination="D8x-dO-lje" id="rfn-kg-boo"/>
                                     <segue destination="YHc-Ws-0WW" kind="show" identifier="ShowCards" id="Pcg-Ud-BSA"/>
                                 </connections>
                             </tableViewCell>

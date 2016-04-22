@@ -49,12 +49,15 @@ class DecksViewController: UITableViewController {
         return decks.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("DeckCell", forIndexPath: indexPath)
+    override func tableView(tableView: UITableView,
+                            cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("DeckCell",
+                                                               forIndexPath: indexPath) as! DeckCell
 
         // Configure the cell...
         let deck = decks[indexPath.row]
-//        cell.textLabel?.text = deck.name
+        cell.nameLabel.text = deck.name
+        cell.descriptionLabel.text = "14 Due, 57 Total"
 
         return cell
     }
