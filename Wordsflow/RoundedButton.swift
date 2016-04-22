@@ -11,8 +11,17 @@ import UIKit
 @IBDesignable
 class RoundedButton: UIButton {
 
-    @IBInspectable var defaultColor = UIColor.blueColor()
-    @IBInspectable var highlightedColor = UIColor.redColor()
+    @IBInspectable var defaultColor: UIColor = UIColor.blueColor() {
+        didSet {
+            layer.backgroundColor = defaultColor.CGColor
+        }
+    }
+    
+    @IBInspectable var highlightedColor: UIColor = UIColor.redColor() {
+        didSet {
+            if highlighted { layer.backgroundColor = highlightedColor.CGColor }
+        }
+    }
     
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet { layer.cornerRadius = cornerRadius }
