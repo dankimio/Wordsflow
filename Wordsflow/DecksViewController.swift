@@ -54,7 +54,7 @@ class DecksViewController: UITableViewController {
 
         // Configure the cell...
         let deck = decks[indexPath.row]
-        cell.textLabel?.text = deck.name
+//        cell.textLabel?.text = deck.name
 
         return cell
     }
