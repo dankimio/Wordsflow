@@ -10,7 +10,7 @@ import Foundation
 
 class Deck {
 
-    let name: String
+    var name: String
     
     var cards = [Card]()
     

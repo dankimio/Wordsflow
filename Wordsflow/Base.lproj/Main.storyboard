@@ -57,7 +57,6 @@
                                 <connections>
                                     <outlet property="descriptionLabel" destination="dP1-LW-8WM" id="WQK-lw-yD9"/>
                                     <outlet property="nameLabel" destination="D8x-dO-lje" id="rfn-kg-boo"/>
-                                    <segue destination="YHc-Ws-0WW" kind="show" identifier="ShowCards" id="Pcg-Ud-BSA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -69,19 +68,22 @@
                     <navigationItem key="navigationItem" title="Decks" id="TJA-Y6-sjl">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nQB-sb-K8R">
                             <connections>
-                                <segue destination="S4f-dB-p4x" kind="presentation" id="Js4-Hs-J3L"/>
+                                <segue destination="S4f-dB-p4x" kind="presentation" identifier="EditDeck" id="Js4-Hs-J3L"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="YHc-Ws-0WW" kind="show" identifier="ShowCards" id="cAX-bx-Skc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ywi-sz-BMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1509" y="1174"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Edit Deck View Controller-->
         <scene sceneID="WYf-HS-BvW">
             <objects>
-                <tableViewController id="oJ0-oF-qIT" sceneMemberID="viewController">
+                <tableViewController id="oJ0-oF-qIT" customClass="EditDeckViewController" customModule="Wordsflow" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ltD-jc-GbL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,28 +91,25 @@
                         <sections>
                             <tableViewSection id="0ka-HT-ayA">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="BcX-p8-WyD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="BcX-p8-WyD">
                                         <rect key="frame" x="0.0" y="99" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BcX-p8-WyD" id="mKv-Gx-1F6">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SCx-cO-rYC">
-                                        <rect key="frame" x="0.0" y="143" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SCx-cO-rYC" id="b9o-eC-SHB">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Pu4-MG-gwh">
-                                        <rect key="frame" x="0.0" y="187" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pu4-MG-gwh" id="Yl8-qw-Oop">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the Deck" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NsS-x7-KBC">
+                                                    <rect key="frame" x="8" y="8" width="584" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="NsS-x7-KBC" secondAttribute="trailing" id="7PD-9a-Z02"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="NsS-x7-KBC" secondAttribute="bottom" id="qVq-0R-5vK"/>
+                                                <constraint firstItem="NsS-x7-KBC" firstAttribute="leading" secondItem="mKv-Gx-1F6" secondAttribute="leadingMargin" id="sU7-t5-m7F"/>
+                                                <constraint firstItem="NsS-x7-KBC" firstAttribute="top" secondItem="mKv-Gx-1F6" secondAttribute="topMargin" id="wK5-Ob-seC"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -122,9 +121,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="si7-AR-JVg">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="aLn-dA-wON"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Mi6-VT-1a5"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="aLn-dA-wON">
+                            <connections>
+                                <action selector="cancel" destination="oJ0-oF-qIT" id="9Ld-KD-d0Z"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Mi6-VT-1a5">
+                            <connections>
+                                <action selector="done" destination="oJ0-oF-qIT" id="u21-Yv-DQH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameTextField" destination="NsS-x7-KBC" id="mxw-gx-caC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCL-VM-Hce" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

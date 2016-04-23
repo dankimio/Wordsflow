@@ -15,6 +15,10 @@ class DecksViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Display an Edit button in the navigation bar for this view controller.
+        navigationItem.leftBarButtonItem = self.editButtonItem()
+        tableView.allowsSelectionDuringEditing = true
+        
         decks = [Deck]()
         
         for i in 1...5 {
@@ -44,12 +48,12 @@ class DecksViewController: UITableViewController {
                                                                forIndexPath: indexPath) as! DeckCell
 
         // Configure the cell...
-        let deck = decks[indexPath.row]
-        cell.nameLabel.text = deck.name
-        cell.descriptionLabel.text = "14 Due, 57 Total"
+        configure(cell, withDeck: decks[indexPath.row])
 
         return cell
     }
+    
+    // MARK: - Table view delegate
 
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView,
@@ -68,42 +72,88 @@ class DecksViewController: UITableViewController {
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
     }
+    
+    override func tableView(tableView: UITableView,
+                            didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        guard let selectedCell = tableView.cellForRowAtIndexPath(indexPath) else { return }
+        
+        if editing {
+            performSegueWithIdentifier("EditDeck", sender: selectedCell)
+        } else {
+            performSegueWithIdentifier("ShowCards", sender: selectedCell)
+        }
+    }
 
-    /*
     // Override to support rearranging the table view.
     override func tableView(tableView: UITableView,
                             moveRowAtIndexPath fromIndexPath: NSIndexPath,
                             toIndexPath: NSIndexPath) {
-        
     }
-    */
-
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView,
-                            canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     // MARK: - Navigation
 
     // Preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
         guard let identifier = segue.identifier else { return }
         
         switch identifier {
         case "ShowCards":
-            let cardsViewController = segue.destinationViewController as! DeckDetailViewController
-            let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)!
-            cardsViewController.deck = decks[indexPath.row]
-        default:
-            return
+            configureCardsViewController(forSegue: segue, cell: sender as! UITableViewCell)
+        case "EditDeck":
+            configureEditDeckViewController(forSegue: segue, cell: sender as? UITableViewCell)
+        default: return
+        }
+    }
+    
+    // MARK: - Helpers
+    
+    private func configure(cell: DeckCell, withDeck deck: Deck) {
+        cell.nameLabel.text = deck.name
+        cell.descriptionLabel.text = "14 Due, 57 Total"
+    }
+    
+    private func configureCardsViewController(forSegue segue: UIStoryboardSegue,
+                                                       cell: UITableViewCell) {
+        
+        let indexPath = tableView.indexPathForCell(cell)!
+        let cardsViewController = segue.destinationViewController as! DeckDetailViewController
+        cardsViewController.deck = decks[indexPath.row]
+    }
+    
+    private func configureEditDeckViewController(forSegue segue: UIStoryboardSegue,
+                                                  cell: UITableViewCell?) {
+        
+        let navigationController = segue.destinationViewController as! UINavigationController
+        let editDeckViewController = navigationController.viewControllers.first
+            as! EditDeckViewController
+        editDeckViewController.delegate = self
+        
+        if let cell = cell, indexPath = tableView.indexPathForCell(cell) {
+            editDeckViewController.deckToEdit = decks[indexPath.row]
         }
     }
 
+}
+
+extension DecksViewController: EditDeckViewControllerProtocol {
+    
+    func editDeckViewController(controller: EditDeckViewController,
+                                didFinishAddingDeck deck: Deck) {
+        
+        decks.append(deck)
+        tableView.reloadData()
+    }
+    
+    func editDeckViewController(controller: EditDeckViewController,
+                                didFinishEditingDeck deck: Deck) {
+        
+        guard let index = decks.indexOf({ $0 === deck }) else { return }
+        
+        let indexPath = NSIndexPath(forRow: index, inSection: 0)
+        if let cell = tableView.cellForRowAtIndexPath(indexPath) as? DeckCell {
+            configure(cell, withDeck: deck)
+        }
+    }
+    
 }
