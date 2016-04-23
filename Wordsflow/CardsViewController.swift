@@ -10,10 +10,11 @@ import UIKit
 
 class CardsViewController: UITableViewController {
     
-    var cardSearchController: UISearchController = {
+    var searchController: UISearchController = {
         let controller = UISearchController(searchResultsController: nil)
         controller.hidesNavigationBarDuringPresentation = false
         controller.dimsBackgroundDuringPresentation = false
+        controller.definesPresentationContext = true
         controller.searchBar.sizeToFit()
         return controller
     }()
@@ -22,14 +23,15 @@ class CardsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        tableView.tableHeaderView = cardSearchController.searchBar
+        searchController.loadViewIfNeeded()
+        tableView.tableHeaderView = searchController.searchBar
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        searchController.dismissViewControllerAnimated(true, completion: nil)
     }
 
     // MARK: - Table view data source
@@ -84,10 +86,10 @@ class CardsViewController: UITableViewController {
         guard let identifier = segue.identifier else { return }
         
         switch identifier {
-        case <#pattern#>:
-            <#code#>
+        case "":
+            return
         default:
-            <#code#>
+            return
         }
     }
 
