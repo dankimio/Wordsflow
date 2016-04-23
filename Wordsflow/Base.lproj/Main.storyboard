@@ -277,7 +277,7 @@
             </objects>
             <point key="canvasLocation" x="2885" y="1174"/>
         </scene>
-        <!--Title-->
+        <!--Cards-->
         <scene sceneID="pca-PM-N8C">
             <objects>
                 <tableViewController id="8ab-dl-eAs" customClass="CardsViewController" customModule="Wordsflow" customModuleProvider="target" sceneMemberID="viewController">
@@ -286,28 +286,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" id="aJa-qf-MpZ">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aJa-qf-MpZ" id="CPe-K0-VLh">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="rb4-kF-Fb6">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </searchBar>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="rb4-kF-Fb6" firstAttribute="leading" secondItem="CPe-K0-VLh" secondAttribute="leading" id="Bxd-nY-GQC"/>
-                                        <constraint firstAttribute="trailing" secondItem="rb4-kF-Fb6" secondAttribute="trailing" id="Oe8-q5-Pvr"/>
-                                        <constraint firstItem="rb4-kF-Fb6" firstAttribute="top" secondItem="CPe-K0-VLh" secondAttribute="top" id="QSn-Rr-94e"/>
-                                        <constraint firstAttribute="bottom" secondItem="rb4-kF-Fb6" secondAttribute="bottom" id="bt6-yU-hH6"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardCell" id="5n5-ME-hyf">
-                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5n5-ME-hyf" id="756-bK-bcF">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -320,13 +300,44 @@
                             <outlet property="delegate" destination="8ab-dl-eAs" id="Dub-qD-aVw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="gqL-to-oDu">
+                    <navigationItem key="navigationItem" title="Cards" id="gqL-to-oDu">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fvs-hm-ALj"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="b5S-Xg-x7X" kind="presentation" id="YWJ-ns-tJc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZK-7H-7yU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2212" y="1875"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="bfT-WH-StS">
+            <objects>
+                <tableViewController id="b5S-Xg-x7X" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="aiY-kU-RiB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SAA-Y6-El6">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SAA-Y6-El6" id="EIy-Ff-0gA">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="b5S-Xg-x7X" id="Ib0-4g-77U"/>
+                            <outlet property="delegate" destination="b5S-Xg-x7X" id="eGl-st-0jt"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mk5-F8-yI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2885" y="1875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mUp-5M-zzZ">

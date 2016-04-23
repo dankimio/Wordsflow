@@ -97,11 +97,11 @@ class DecksViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         guard let identifier = segue.identifier else { return }
         
+        let cell = sender as? UITableViewCell
+        
         switch identifier {
-        case "ShowCards":
-            configureCardsViewController(forSegue: segue, cell: sender as! UITableViewCell)
-        case "EditDeck":
-            configureEditDeckViewController(forSegue: segue, cell: sender as? UITableViewCell)
+        case "ShowCards": configureCardsViewController(forSegue: segue, cell: cell!)
+        case "EditDeck": configureEditDeckViewController(forSegue: segue, cell: cell)
         default: return
         }
     }
