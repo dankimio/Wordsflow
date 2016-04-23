@@ -136,7 +136,7 @@ class DecksViewController: UITableViewController {
 
 }
 
-extension DecksViewController: EditDeckViewControllerProtocol {
+extension DecksViewController: EditDeckViewControllerDelegate {
     
     func editDeckViewController(controller: EditDeckViewController,
                                 didFinishAddingDeck deck: Deck) {

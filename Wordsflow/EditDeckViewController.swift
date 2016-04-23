@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol EditDeckViewControllerProtocol: class {
+protocol EditDeckViewControllerDelegate: class {
     func editDeckViewController(controller: EditDeckViewController, didFinishAddingDeck deck: Deck)
     func editDeckViewController(controller: EditDeckViewController, didFinishEditingDeck deck: Deck)
 }
@@ -17,7 +17,7 @@ class EditDeckViewController: UITableViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     
-    var delegate: EditDeckViewControllerProtocol?
+    var delegate: EditDeckViewControllerDelegate?
     var deckToEdit: Deck?
 
     override func viewDidLoad() {
@@ -29,8 +29,6 @@ class EditDeckViewController: UITableViewController {
     }
     
     @IBAction func done() {
-        dismissViewControllerAnimated(true, completion: nil)
-        
         let name = nameTextField.text!
         
         if let deck = deckToEdit {
@@ -39,20 +37,12 @@ class EditDeckViewController: UITableViewController {
         } else {
             delegate?.editDeckViewController(self, didFinishAddingDeck: Deck(name: name))
         }
+        
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func cancel() {
         dismissViewControllerAnimated(true, completion: nil)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -40,57 +40,82 @@ class CardsViewController: UITableViewController {
         return cards.count
     }
 
-
     override func tableView(tableView: UITableView,
                             cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        return configureCardCell(forIndexPath: indexPath)
-    }
-    
-    // MARK: - Helpers
-    
-    private func configureSearchBar(forIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCellWithIdentifier("SearchCell", forIndexPath: indexPath)
-    }
-    
-    private func configureCardCell(forIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CardCell", forIndexPath: indexPath)
-        let card = cards[indexPath.row]
-        cell.textLabel?.text = card.front
+        let cell = tableView.dequeueReusableCellWithIdentifier("CardCell",
+                                                               forIndexPath: indexPath)
+        configure(cell, forCard: cards[indexPath.row])
+        
         return cell
     }
-
+    
+    // MARK: - Table view delegate
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        performSegueWithIdentifier("EditCard", sender: cell)
+    }
+    
     // Support conditional editing of the table view.
     override func tableView(tableView: UITableView,
                             canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
-
+    
     // Support editing the table view.
     override func tableView(tableView: UITableView,
                             commitEditingStyle editingStyle: UITableViewCellEditingStyle,
-                            forRowAtIndexPath indexPath: NSIndexPath) {
+                                               forRowAtIndexPath indexPath: NSIndexPath) {
         
         if editingStyle == .Delete {
             // Delete the row from the data source
+            cards.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
+    }
+    
+    // MARK: - Helpers
+    
+    private func configure(cell: UITableViewCell, forCard card: Card) {
+        cell.textLabel!.text = card.front
+        cell.detailTextLabel!.text = card.back
     }
 
     // MARK: - Navigation
 
     // Preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        guard let identifier = segue.identifier else { return }
+        guard let identifier = segue.identifier where identifier == "EditCard" else { return }
         
-        switch identifier {
-        case "":
-            return
-        default:
-            return
+        let navigationController = segue.destinationViewController as! UINavigationController
+        let editCardViewController = navigationController.viewControllers.first!
+            as! EditCardViewController
+        editCardViewController.delegate = self
+        
+        if let cell = sender as? UITableViewCell, indexPath = tableView.indexPathForCell(cell) {
+            editCardViewController.cardToEdit = cards[indexPath.row]
         }
     }
 
+}
+
+extension CardsViewController: EditCardViewControllerDelegate {
+    
+    func editCardViewController(controller: EditCardViewController,
+                                didFinishAddingCard card: Card) {
+        cards.append(card)
+        tableView.reloadData()
+    }
+    
+    func editCardViewController(controller: EditCardViewController,
+                                didFinishEditingCard card: Card) {
+        
+        guard let index = cards.indexOf({ $0 === card }) else { return }
+        
+        let indexPath = NSIndexPath(forRow: index, inSection: 0)
+        if let cell = tableView.cellForRowAtIndexPath(indexPath) {
+            configure(cell, forCard: card)
+        }
+    }
 }

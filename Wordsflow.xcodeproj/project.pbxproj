@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		371007A81CCB5F1F00D9C667 /* EditDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371007A71CCB5F1F00D9C667 /* EditDeckViewController.swift */; };
+		371007AA1CCB9CD500D9C667 /* EditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371007A91CCB9CD500D9C667 /* EditCardViewController.swift */; };
 		371650DE1CC9877100897E32 /* DeckDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371650DD1CC9877100897E32 /* DeckDetailViewController.swift */; };
 		371650E11CC9A09A00897E32 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371650E01CC9A09A00897E32 /* IndicatorView.swift */; };
 		371650E31CC9A19800897E32 /* DeckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371650E21CC9A19800897E32 /* DeckCell.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		371007A71CCB5F1F00D9C667 /* EditDeckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDeckViewController.swift; sourceTree = "<group>"; };
+		371007A91CCB9CD500D9C667 /* EditCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCardViewController.swift; sourceTree = "<group>"; };
 		371650DD1CC9877100897E32 /* DeckDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckDetailViewController.swift; sourceTree = "<group>"; };
 		371650E01CC9A09A00897E32 /* IndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		371650E21CC9A19800897E32 /* DeckCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckCell.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				37703F9F1CC9540F00A96980 /* CardsViewController.swift */,
 				371650DD1CC9877100897E32 /* DeckDetailViewController.swift */,
 				371007A71CCB5F1F00D9C667 /* EditDeckViewController.swift */,
+				371007A91CCB9CD500D9C667 /* EditCardViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				37703FA41CC9653500A96980 /* Card.swift in Sources */,
 				371650E31CC9A19800897E32 /* DeckCell.swift in Sources */,
 				37703F8C1CC94A1E00A96980 /* AppDelegate.swift in Sources */,
+				371007AA1CCB9CD500D9C667 /* EditCardViewController.swift in Sources */,
 				37703FA21CC9651E00A96980 /* Scheduler.swift in Sources */,
 				371007A81CCB5F1F00D9C667 /* EditDeckViewController.swift in Sources */,
 				37703F9E1CC94B4100A96980 /* DecksViewController.swift in Sources */,

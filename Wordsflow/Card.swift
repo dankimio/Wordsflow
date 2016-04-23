@@ -10,8 +10,8 @@ import Foundation
 
 class Card {
     
-    let front: String
-    let back: String
+    var front: String
+    var back: String
 
     var easinessFactor: Double
     var interval: Int
