@@ -118,4 +118,5 @@ extension CardsViewController: EditCardViewControllerDelegate {
             configure(cell, forCard: card)
         }
     }
+
 }
