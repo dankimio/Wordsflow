@@ -68,6 +68,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Decks" id="TJA-Y6-sjl">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nQB-sb-K8R">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="S4f-dB-p4x" kind="presentation" identifier="EditDeck" id="Js4-Hs-J3L"/>
                             </connections>
@@ -123,11 +124,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="si7-AR-JVg">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="aLn-dA-wON">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="cancel" destination="oJ0-oF-qIT" id="9Ld-KD-d0Z"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Mi6-VT-1a5">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="done" destination="oJ0-oF-qIT" id="u21-Yv-DQH"/>
                             </connections>
@@ -378,6 +381,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Cards" id="gqL-to-oDu">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fvs-hm-ALj">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="Lww-RR-eYC" kind="presentation" identifier="EditCard" id="dNb-8H-vTl"/>
                             </connections>
@@ -457,11 +461,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="36j-ZE-SLW">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vAr-pV-Igk">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="cancel" destination="b5S-Xg-x7X" id="jrh-CO-Ivg"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="HgZ-Jt-Fpa">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="done" destination="b5S-Xg-x7X" id="etb-Xc-FJf"/>
                             </connections>
@@ -481,9 +487,14 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1cQ-5y-33B" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iNk-sS-ipq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="iNk-sS-ipq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.039215686274509803" green="0.27450980392156865" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -499,9 +510,11 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S4f-dB-p4x" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="27G-OT-Pw1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="27G-OT-Pw1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.039215686270000001" green="0.27450980390000002" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -517,9 +530,11 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lww-RR-eYC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zqd-JY-11e">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="zqd-JY-11e">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.039215686270000001" green="0.27450980390000002" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

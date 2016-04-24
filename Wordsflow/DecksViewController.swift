@@ -17,6 +17,7 @@ class DecksViewController: UITableViewController {
         
         // Display an Edit button in the navigation bar for this view controller.
         navigationItem.leftBarButtonItem = self.editButtonItem()
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.whiteColor()
         tableView.allowsSelectionDuringEditing = true
         
         decks = [Deck]()
