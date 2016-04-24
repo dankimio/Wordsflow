@@ -219,7 +219,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="869-U9-bhW">
-                                <rect key="frame" x="20" y="532" width="560" height="38"/>
+                                <rect key="frame" x="20" y="522" width="560" height="38"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyL-Ly-Jky" customClass="RoundedButton" customModule="Wordsflow" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="129" height="38"/>
@@ -267,6 +267,13 @@
                                     <constraint firstItem="alb-yM-92G" firstAttribute="width" secondItem="cyL-Ly-Jky" secondAttribute="width" id="ZYP-mf-YFL"/>
                                     <constraint firstItem="jI8-25-RkO" firstAttribute="width" secondItem="cyL-Ly-Jky" secondAttribute="width" id="pil-wj-nsC"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="pil-wj-nsC"/>
+                                        <exclude reference="QqQ-Db-oh7"/>
+                                        <exclude reference="ZYP-mf-YFL"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcK-ge-8Go" customClass="RoundedButton" customModule="Wordsflow" customModuleProvider="target">
                                 <rect key="frame" x="221" y="520" width="158" height="40"/>
@@ -321,7 +328,7 @@
                             <constraint firstAttribute="leadingMargin" secondItem="869-U9-bhW" secondAttribute="leading" id="szx-fu-fYx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="869-U9-bhW" secondAttribute="trailing" id="tTH-MO-vxR"/>
                             <constraint firstItem="869-U9-bhW" firstAttribute="centerX" secondItem="acl-iX-49B" secondAttribute="centerX" id="yCV-gh-O7R"/>
-                            <constraint firstItem="snC-0m-3AF" firstAttribute="top" secondItem="869-U9-bhW" secondAttribute="bottom" constant="30" id="yZR-vm-Tfu"/>
+                            <constraint firstItem="snC-0m-3AF" firstAttribute="top" secondItem="869-U9-bhW" secondAttribute="bottom" constant="40" id="yZR-vm-Tfu"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -489,7 +496,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49g-QI-pkv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="697" y="1174"/>
+            <point key="canvasLocation" x="834" y="1174"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GqE-dM-waL">
