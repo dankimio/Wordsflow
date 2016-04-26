@@ -26,6 +26,8 @@ class EditDeckViewController: UITableViewController {
         if let deck = deckToEdit {
             nameTextField.text = deck.name
         }
+        
+        nameTextField.becomeFirstResponder()
     }
     
     @IBAction func done() {

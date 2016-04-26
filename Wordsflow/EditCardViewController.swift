@@ -28,6 +28,8 @@ class EditCardViewController: UITableViewController {
             frontTextView.text = card.front
             backTextView.text = card.back
         }
+        
+        frontTextView.becomeFirstResponder()
     }
 
     @IBAction func done() {
