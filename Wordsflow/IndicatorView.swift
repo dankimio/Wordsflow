@@ -15,7 +15,7 @@ class IndicatorView: UIView {
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
         // Drawing code
-        let fillColor = UIColor(red: 10 / 255, green: 70 / 255, blue: 160 / 255, alpha: 1)
+        let fillColor = UIColor(red: 20 / 255, green: 80 / 255, blue: 170 / 255, alpha: 1)
         fillColor.setFill()
         let circle = UIBezierPath(ovalInRect: rect)
         circle.fill()
