@@ -1,0 +1,17 @@
+PODS:
+  - Realm (0.99.1):
+    - Realm/Headers (= 0.99.1)
+  - Realm/Headers (0.99.1)
+  - RealmSwift (0.99.1):
+    - Realm (= 0.99.1)
+
+DEPENDENCIES:
+  - RealmSwift
+
+SPEC CHECKSUMS:
+  Realm: 522a0cc8e1f8755ee56d7dc16ca0fc380d045766
+  RealmSwift: 1d9c4299ef5dbf575c5da09fc706ed726327cfa0
+
+PODFILE CHECKSUM: a4c52b296f3157f30375a02b048047d95f5122bc
+
+COCOAPODS: 1.0.0.beta.8

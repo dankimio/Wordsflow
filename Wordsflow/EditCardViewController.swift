@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 protocol EditCardViewControllerDelegate {
     func editCardViewController(controller: EditCardViewController, didFinishAddingCard card: Card)
@@ -18,6 +19,8 @@ class EditCardViewController: UITableViewController {
     @IBOutlet weak var frontTextView: UITextView!
     @IBOutlet weak var backTextView: UITextView!
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
+    
+    let realm = try! Realm()
     
     var delegate: EditCardViewControllerDelegate?
     var cardToEdit: Card?
@@ -46,6 +49,7 @@ class EditCardViewController: UITableViewController {
             let card = Card()
             card.front = front
             card.back = back
+            try! realm.write { realm.add(card) }
             delegate?.editCardViewController(self, didFinishAddingCard: card)
         }
         

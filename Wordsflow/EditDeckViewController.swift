@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 protocol EditDeckViewControllerDelegate: class {
     func editDeckViewController(controller: EditDeckViewController, didFinishAddingDeck deck: Deck)
@@ -18,6 +19,7 @@ class EditDeckViewController: UITableViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
     
+    let realm = try! Realm()
     var delegate: EditDeckViewControllerDelegate?
     var deckToEdit: Deck?
 
@@ -39,7 +41,12 @@ class EditDeckViewController: UITableViewController {
             deck.name = name
             delegate?.editDeckViewController(self, didFinishEditingDeck: deck)
         } else {
-            delegate?.editDeckViewController(self, didFinishAddingDeck: Deck(name: name))
+            let deck = Deck()
+            deck.name = name
+            try! realm.write {
+                realm.add(deck)
+            }
+            delegate?.editDeckViewController(self, didFinishAddingDeck: deck)
         }
         
         dismissViewControllerAnimated(true, completion: nil)

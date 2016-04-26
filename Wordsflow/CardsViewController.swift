@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CardsViewController: UITableViewController {
     
@@ -19,7 +20,8 @@ class CardsViewController: UITableViewController {
         return controller
     }()
     
-    var cards: [Card]!
+    let realm = try! Realm()
+    var cards: List<Card>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +72,7 @@ class CardsViewController: UITableViewController {
         
         if editingStyle == .Delete {
             // Delete the row from the data source
-            cards.removeAtIndex(indexPath.row)
+            try! realm.write { realm.delete(cards[indexPath.row]) }
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
     }
@@ -104,7 +106,8 @@ extension CardsViewController: EditCardViewControllerDelegate {
     
     func editCardViewController(controller: EditCardViewController,
                                 didFinishAddingCard card: Card) {
-        cards.append(card)
+        
+        try! realm.write { cards.append(card) }
         tableView.reloadData()
     }
     

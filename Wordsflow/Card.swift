@@ -7,23 +7,24 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Card {
+class Card: Object {
     
-    var front: String
-    var back: String
+    dynamic var front: String = ""
+    dynamic var back: String = ""
 
-    var easinessFactor: Double
-    var interval: Int
-    var repetitions: Int
+    dynamic var easinessFactor: Double = 2.5
+    dynamic var interval: Int = 0
+    dynamic var repetitions: Int = 0
 
-    init() {
-        front = "Front"
-        back = "Back"
-
-        easinessFactor = 2.5
-        repetitions = 0
-        interval = 0
-    }
+//    init() {
+//        front = "Front"
+//        back = "Back"
+//
+//        easinessFactor = 2.5
+//        repetitions = 0
+//        interval = 0
+//    }
 
 }
