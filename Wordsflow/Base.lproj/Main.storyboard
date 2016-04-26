@@ -38,8 +38,8 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dP1-LW-8WM">
-                                            <rect key="frame" x="32" y="48" width="560" height="18"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <rect key="frame" x="32" y="48" width="560" height="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -106,6 +106,7 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
                                                         <action selector="done" destination="oJ0-oF-qIT" eventType="editingDidEndOnExit" id="fC1-qd-XPG"/>
+                                                        <outlet property="delegate" destination="oJ0-oF-qIT" id="4EA-r7-qNK"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -132,7 +133,7 @@
                                 <action selector="cancel" destination="oJ0-oF-qIT" id="9Ld-KD-d0Z"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Mi6-VT-1a5">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="Mi6-VT-1a5">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="done" destination="oJ0-oF-qIT" id="u21-Yv-DQH"/>
@@ -140,6 +141,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="doneBarButton" destination="Mi6-VT-1a5" id="92T-gj-oiU"/>
                         <outlet property="nameTextField" destination="NsS-x7-KBC" id="mxw-gx-caC"/>
                     </connections>
                 </tableViewController>
@@ -453,6 +455,9 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="b5S-Xg-x7X" id="mYN-YX-Phh"/>
+                                                    </connections>
                                                 </textView>
                                             </subviews>
                                             <constraints>
@@ -479,6 +484,9 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="b5S-Xg-x7X" id="Poh-BM-KZ1"/>
+                                                    </connections>
                                                 </textView>
                                             </subviews>
                                             <constraints>
@@ -504,7 +512,7 @@
                                 <action selector="cancel" destination="b5S-Xg-x7X" id="jrh-CO-Ivg"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="HgZ-Jt-Fpa">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="HgZ-Jt-Fpa">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="done" destination="b5S-Xg-x7X" id="etb-Xc-FJf"/>
@@ -513,6 +521,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backTextView" destination="Q8u-u9-lbj" id="CAd-kG-GoL"/>
+                        <outlet property="doneBarButton" destination="HgZ-Jt-Fpa" id="QBB-nI-ZfE"/>
                         <outlet property="frontTextView" destination="4hO-np-YjY" id="yiy-oT-Ejk"/>
                     </connections>
                 </tableViewController>

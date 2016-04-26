@@ -17,6 +17,7 @@ class EditCardViewController: UITableViewController {
     
     @IBOutlet weak var frontTextView: UITextView!
     @IBOutlet weak var backTextView: UITextView!
+    @IBOutlet weak var doneBarButton: UIBarButtonItem!
     
     var delegate: EditCardViewControllerDelegate?
     var cardToEdit: Card?
@@ -27,6 +28,7 @@ class EditCardViewController: UITableViewController {
         if let card = cardToEdit {
             frontTextView.text = card.front
             backTextView.text = card.back
+            doneBarButton.enabled = true
         }
         
         frontTextView.becomeFirstResponder()
@@ -54,4 +56,13 @@ class EditCardViewController: UITableViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+}
+
+extension EditCardViewController: UITextViewDelegate {
+    
+    func textViewDidChange(textView: UITextView) {
+        doneBarButton.enabled = frontTextView.text.characters.count > 0 &&
+            backTextView.text.characters.count > 0
+    }
+    
 }

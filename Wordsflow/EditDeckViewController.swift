@@ -16,6 +16,7 @@ protocol EditDeckViewControllerDelegate: class {
 class EditDeckViewController: UITableViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var doneBarButton: UIBarButtonItem!
     
     var delegate: EditDeckViewControllerDelegate?
     var deckToEdit: Deck?
@@ -25,6 +26,7 @@ class EditDeckViewController: UITableViewController {
         
         if let deck = deckToEdit {
             nameTextField.text = deck.name
+            doneBarButton.enabled = true
         }
         
         nameTextField.becomeFirstResponder()
@@ -47,4 +49,21 @@ class EditDeckViewController: UITableViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+}
+
+extension EditDeckViewController: UITextFieldDelegate {
+    
+    func textField(textField: UITextField,
+                   shouldChangeCharactersInRange range: NSRange,
+                   replacementString string: String) -> Bool {
+        
+        let oldText: NSString = textField.text!
+        let newText: NSString = oldText.stringByReplacingCharactersInRange(range,
+                                                                           withString: string)
+        
+        doneBarButton.enabled = newText.length > 0
+        
+        return true
+    }
+    
 }
