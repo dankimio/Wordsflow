@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DecksViewController: UITableViewController {
     
-    var decks: [Deck]!
+    let realm = try! Realm()
+    let decks = try! Realm().objects(Deck)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,14 +21,6 @@ class DecksViewController: UITableViewController {
         navigationItem.leftBarButtonItem = self.editButtonItem()
         navigationItem.leftBarButtonItem?.tintColor = UIColor.whiteColor()
         tableView.allowsSelectionDuringEditing = true
-        
-        decks = [Deck]()
-        
-        for i in 1...5 {
-            let deck = Deck(name: "Deck \(i)")
-            deck.cards.append(Card())
-            decks.append(deck)
-        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -69,7 +63,9 @@ class DecksViewController: UITableViewController {
         
         if editingStyle == .Delete {
             // Delete the row from the data source
-            decks.removeAtIndex(indexPath.row)
+            try! realm.write {
+                realm.delete(decks[indexPath.row])
+            }
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
     }
@@ -142,7 +138,6 @@ extension DecksViewController: EditDeckViewControllerDelegate {
     func editDeckViewController(controller: EditDeckViewController,
                                 didFinishAddingDeck deck: Deck) {
         
-        decks.append(deck)
         tableView.reloadData()
     }
     

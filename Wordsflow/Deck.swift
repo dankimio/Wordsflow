@@ -7,15 +7,11 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Deck {
+class Deck: Object {
 
-    var name: String
-    
-    var cards = [Card]()
-    
-    init(name: String) {
-        self.name = name
-    }
+    dynamic var name: String = ""
+    let cards = List<Card>()
 
 }
