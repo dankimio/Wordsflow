@@ -113,7 +113,7 @@ extension CardsViewController: EditCardViewControllerDelegate {
     func editCardViewController(controller: EditCardViewController,
                                 didFinishEditingCard card: Card) {
         
-        guard let index = cards.indexOf({ $0 === card }) else { return }
+        guard let index = cards.indexOf(card) else { return }
         
         let indexPath = NSIndexPath(forRow: index, inSection: 0)
         if let cell = tableView.cellForRowAtIndexPath(indexPath) {

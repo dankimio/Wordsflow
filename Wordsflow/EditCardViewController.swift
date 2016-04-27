@@ -42,8 +42,10 @@ class EditCardViewController: UITableViewController {
         let back = backTextView.text
         
         if let card = cardToEdit {
-            card.front = front
-            card.back = back
+            try! realm.write {
+                card.front = front
+                card.back = back
+            }
             delegate?.editCardViewController(self, didFinishEditingCard: card)
         } else {
             let card = Card()

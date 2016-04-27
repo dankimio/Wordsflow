@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 struct Scheduler {
 
@@ -17,6 +18,8 @@ struct Scheduler {
     
     let card: Card
     let quality: Int
+    
+    let realm = try! Realm()
 
     init(card: Card, quality: Int) {
         self.card = card
@@ -24,8 +27,12 @@ struct Scheduler {
     }
     
     func schedule() {
-        card.easinessFactor = newEasinessFactor
-        calculateInterval()
+        try! realm.write {
+            card.easinessFactor = newEasinessFactor
+            calculateInterval()
+            card.dueDate = card.dueDate.dateByAddingUnit(.Day, value: 1)
+            card.studiedAt = NSDate()
+        }
     }
     
     private func calculateInterval() {
@@ -46,4 +53,17 @@ struct Scheduler {
         return (result < minEasinessFactor ? minEasinessFactor : result)
     }
 
+}
+
+extension NSDate {
+    
+    func dateByAddingUnit(unit: NSCalendarUnit, value: Int) -> NSDate {
+        return NSCalendar
+            .currentCalendar()
+            .dateByAddingUnit(unit,
+                              value: value,
+                              toDate: self,
+                              options: NSCalendarOptions(rawValue: 0))!
+    }
+    
 }
