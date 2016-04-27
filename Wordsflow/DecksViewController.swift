@@ -42,7 +42,6 @@ class DecksViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("DeckCell",
                                                                forIndexPath: indexPath) as! DeckCell
 
-        // Configure the cell...
         configure(cell, withDeck: decks[indexPath.row])
 
         return cell
@@ -90,7 +89,6 @@ class DecksViewController: UITableViewController {
 
     // MARK: - Navigation
 
-    // Preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         guard let identifier = segue.identifier else { return }
         
@@ -137,7 +135,6 @@ extension DecksViewController: EditDeckViewControllerDelegate {
     
     func editDeckViewController(controller: EditDeckViewController,
                                 didFinishAddingDeck deck: Deck) {
-        
         tableView.reloadData()
     }
     

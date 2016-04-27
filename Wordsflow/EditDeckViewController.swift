@@ -43,9 +43,7 @@ class EditDeckViewController: UITableViewController {
         } else {
             let deck = Deck()
             deck.name = name
-            try! realm.write {
-                realm.add(deck)
-            }
+            try! realm.write { realm.add(deck) }
             delegate?.editDeckViewController(self, didFinishAddingDeck: deck)
         }
         

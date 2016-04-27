@@ -86,7 +86,6 @@ class CardsViewController: UITableViewController {
 
     // MARK: - Navigation
 
-    // Preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         guard let identifier = segue.identifier where identifier == "EditCard" else { return }
         

@@ -19,28 +19,13 @@ class DeckDetailViewController: UIViewController {
         title = deck.name
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        guard let identifier = segue.identifier where identifier == "ShowCards" else { return }
         
-        if let identifier = segue.identifier {
-            switch identifier {
-            case "ShowCards":
-                let cardsViewController = segue.destinationViewController as! CardsViewController
-                cardsViewController.cards = deck.cards
-            default:
-                return
-            }
-        }
+        let cardsViewController = segue.destinationViewController as! CardsViewController
+        cardsViewController.cards = deck.cards
     }
 
 }

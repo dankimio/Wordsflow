@@ -18,13 +18,4 @@ class Card: Object {
     dynamic var interval: Int = 0
     dynamic var repetitions: Int = 0
 
-//    init() {
-//        front = "Front"
-//        back = "Back"
-//
-//        easinessFactor = 2.5
-//        repetitions = 0
-//        interval = 0
-//    }
-
 }
