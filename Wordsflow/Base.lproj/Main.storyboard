@@ -218,6 +218,7 @@
         <!--Study View Controller-->
         <scene sceneID="ric-xc-jU6">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="daN-V7-hLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="rEP-Ff-bxv" customClass="StudyViewController" customModule="Wordsflow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rMp-W3-e6J"/>
@@ -395,11 +396,64 @@
                         <outlet property="backLabel" destination="8QI-cB-N0v" id="GVU-Z9-opY"/>
                         <outlet property="frontLabel" destination="qLr-rg-bDK" id="cnb-VE-jE2"/>
                         <outlet property="showAnswerButton" destination="zcK-ge-8Go" id="d36-AC-NfM"/>
+                        <segue destination="lnG-6e-dbE" kind="presentation" identifier="ShowFinishView" id="KyC-Jy-L7F"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="daN-V7-hLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2885" y="1174"/>
+        </scene>
+        <!--Finish View Controller-->
+        <scene sceneID="bpX-jd-0a6">
+            <objects>
+                <viewController id="jx2-jA-dbK" customClass="FinishViewController" customModule="Wordsflow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tF4-mA-q35"/>
+                        <viewControllerLayoutGuide type="bottom" id="iu2-py-eKO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TRX-m7-ugJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UA7-g5-mtd" customClass="RoundedButton" customModule="Wordsflow" customModuleProvider="target">
+                                <rect key="frame" x="250" y="401" width="101" height="38"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="10" maxX="30" maxY="10"/>
+                                <state key="normal" title="Done!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultColor">
+                                        <color key="value" red="0.078431372550000003" green="0.31372549020000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="B9F-dw-aUh" kind="unwind" unwindAction="unwindBack:" id="JHX-vm-u1v"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hoB-So-USf">
+                                <rect key="frame" x="200" y="157" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="1J9-3y-ZET"/>
+                                    <constraint firstAttribute="height" constant="200" id="s3c-1V-Gej"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UA7-g5-mtd" firstAttribute="centerX" secondItem="TRX-m7-ugJ" secondAttribute="centerX" id="2XO-TM-xvL"/>
+                            <constraint firstItem="hoB-So-USf" firstAttribute="centerX" secondItem="TRX-m7-ugJ" secondAttribute="centerX" id="Quf-68-m5r"/>
+                            <constraint firstItem="UA7-g5-mtd" firstAttribute="centerY" secondItem="TRX-m7-ugJ" secondAttribute="centerY" multiplier="1.4" id="ZUO-kX-DJD"/>
+                            <constraint firstItem="UA7-g5-mtd" firstAttribute="top" secondItem="hoB-So-USf" secondAttribute="bottom" constant="44" id="z27-4x-q0r"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eMP-Rr-ba0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7I8-jB-C0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="B9F-dw-aUh" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3575" y="1875"/>
         </scene>
         <!--Cards-->
         <scene sceneID="pca-PM-N8C">
@@ -612,6 +666,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wwe-Wu-o4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2212" y="2575"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wxa-EP-F9K">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lnG-6e-dbE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="KLw-nJ-97A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.039215686270000001" green="0.27450980390000002" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jx2-jA-dbK" kind="relationship" relationship="rootViewController" id="LNO-rQ-foE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AKU-Sx-9CH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2885" y="1875"/>
         </scene>
     </scenes>
 </document>

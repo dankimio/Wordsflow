@@ -34,6 +34,10 @@ class StudyViewController: UIViewController {
         answer(sender.tag)
     }
     
+    @IBAction func unwindBack(segue: UIStoryboardSegue) {
+        navigationController!.popViewControllerAnimated(true)
+    }
+    
     private func showNextCard() {
         guard let nextCard = cardsToStudy.first else {
             print("Finished!")
@@ -42,6 +46,7 @@ class StudyViewController: UIViewController {
             showAnswerButton.hidden = true
             
             // TODO: Show finish screen
+            performSegueWithIdentifier("ShowFinishView", sender: self)
             
             return
         }
@@ -69,5 +74,6 @@ class StudyViewController: UIViewController {
         hideAnswer()
         showNextCard()
     }
+    
 
 }
