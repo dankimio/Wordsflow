@@ -22,10 +22,18 @@ class DeckDetailViewController: UIViewController {
     // MARK: - Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        guard let identifier = segue.identifier where identifier == "ShowCards" else { return }
+        guard let identifier = segue.identifier else { return }
         
-        let cardsViewController = segue.destinationViewController as! CardsViewController
-        cardsViewController.cards = deck.cards
+        switch identifier {
+        case "ShowCards":
+            let cardsViewController = segue.destinationViewController as! CardsViewController
+            cardsViewController.cards = deck.cards
+        case "StudyCards":
+            let studyViewController = segue.destinationViewController as! StudyViewController
+            let dueToday = NSPredicate(format: "dueDate < %@", NSDate())
+            studyViewController.cardsToStudy = deck.cards.filter(dueToday).sorted("dueDate")
+        default: return
+        }
     }
 
 }

@@ -13,6 +13,7 @@
 		371650E11CC9A09A00897E32 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371650E01CC9A09A00897E32 /* IndicatorView.swift */; };
 		371650E31CC9A19800897E32 /* DeckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371650E21CC9A19800897E32 /* DeckCell.swift */; };
 		371650E51CCA27E400897E32 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371650E41CCA27E400897E32 /* RoundedButton.swift */; };
+		371BCD0F1CD1235D000ADF03 /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371BCD0E1CD1235D000ADF03 /* StudyViewController.swift */; };
 		37703F8C1CC94A1E00A96980 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37703F8B1CC94A1E00A96980 /* AppDelegate.swift */; };
 		37703F911CC94A1E00A96980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37703F8F1CC94A1E00A96980 /* Main.storyboard */; };
 		37703F931CC94A1E00A96980 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37703F921CC94A1E00A96980 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		371650E01CC9A09A00897E32 /* IndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		371650E21CC9A19800897E32 /* DeckCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckCell.swift; sourceTree = "<group>"; };
 		371650E41CCA27E400897E32 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		371BCD0E1CD1235D000ADF03 /* StudyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
 		37703F881CC94A1E00A96980 /* Wordsflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordsflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37703F8B1CC94A1E00A96980 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37703F901CC94A1E00A96980 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		371650DF1CC99FBF00897E32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				37703F8F1CC94A1E00A96980 /* Main.storyboard */,
 				371650E01CC9A09A00897E32 /* IndicatorView.swift */,
 				371650E21CC9A19800897E32 /* DeckCell.swift */,
 				371650E41CCA27E400897E32 /* RoundedButton.swift */,
@@ -107,6 +110,7 @@
 				371650DD1CC9877100897E32 /* DeckDetailViewController.swift */,
 				371007A71CCB5F1F00D9C667 /* EditDeckViewController.swift */,
 				371007A91CCB9CD500D9C667 /* EditCardViewController.swift */,
+				371BCD0E1CD1235D000ADF03 /* StudyViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -125,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				37703F8B1CC94A1E00A96980 /* AppDelegate.swift */,
-				37703F8F1CC94A1E00A96980 /* Main.storyboard */,
 				37703F921CC94A1E00A96980 /* Assets.xcassets */,
 				37703F941CC94A1E00A96980 /* LaunchScreen.storyboard */,
 				37703F971CC94A1E00A96980 /* Info.plist */,
@@ -277,6 +280,7 @@
 				37703FA01CC9540F00A96980 /* CardsViewController.swift in Sources */,
 				37703FA41CC9653500A96980 /* Card.swift in Sources */,
 				371650E31CC9A19800897E32 /* DeckCell.swift in Sources */,
+				371BCD0F1CD1235D000ADF03 /* StudyViewController.swift in Sources */,
 				37703F8C1CC94A1E00A96980 /* AppDelegate.swift in Sources */,
 				371007AA1CCB9CD500D9C667 /* EditCardViewController.swift in Sources */,
 				37703FA21CC9651E00A96980 /* Scheduler.swift in Sources */,
