@@ -38,7 +38,7 @@ class EditDeckViewController: UITableViewController {
         let name = nameTextField.text!
         
         if let deck = deckToEdit {
-            deck.name = name
+            try! realm.write { deck.name = name }
             delegate?.editDeckViewController(self, didFinishEditingDeck: deck)
         } else {
             let deck = Deck()

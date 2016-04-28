@@ -12,6 +12,7 @@ class DeckCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var indicatorView: IndicatorView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

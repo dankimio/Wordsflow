@@ -29,6 +29,8 @@ class DecksViewController: UITableViewController {
         if let selectedIndexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(selectedIndexPath, animated: true)
         }
+        
+        tableView.reloadData()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -119,8 +121,10 @@ class DecksViewController: UITableViewController {
         
         if dueCardsCount > 0 {
             cell.descriptionLabel.text = "\(dueCardsCount) Due, \(cardsCount) Total"
+            cell.indicatorView.hidden = false
         } else {
             cell.descriptionLabel.text = "Well done! No due cards. \(cardsCount) Total"
+            cell.indicatorView.hidden = true
         }
     }
     
@@ -157,7 +161,7 @@ extension DecksViewController: EditDeckViewControllerDelegate {
     func editDeckViewController(controller: EditDeckViewController,
                                 didFinishEditingDeck deck: Deck) {
         
-        guard let index = decks.indexOf({ $0 === deck }) else { return }
+        guard let index = decks.indexOf(deck) else { return }
         
         let indexPath = NSIndexPath(forRow: index, inSection: 0)
         if let cell = tableView.cellForRowAtIndexPath(indexPath) as? DeckCell {

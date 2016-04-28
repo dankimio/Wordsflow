@@ -57,6 +57,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="dP1-LW-8WM" id="WQK-lw-yD9"/>
+                                    <outlet property="indicatorView" destination="PPf-mg-A57" id="HWt-2s-2lG"/>
                                     <outlet property="nameLabel" destination="D8x-dO-lje" id="rfn-kg-boo"/>
                                 </connections>
                             </tableViewCell>
