@@ -13,5 +13,10 @@ class Deck: Object {
 
     dynamic var name: String = ""
     let cards = List<Card>()
+    
+    var dueCards: Results<Card> {
+        let dueToday = NSPredicate(format: "dueDate < %@", NSDate())
+        return cards.filter(dueToday).sorted("dueDate")
+    }
 
 }

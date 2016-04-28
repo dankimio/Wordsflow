@@ -113,7 +113,15 @@ class DecksViewController: UITableViewController {
     
     private func configure(cell: DeckCell, withDeck deck: Deck) {
         cell.nameLabel.text = deck.name
-        cell.descriptionLabel.text = "14 Due, 57 Total"
+        
+        let dueCardsCount = deck.dueCards.count
+        let cardsCount = deck.cards.count
+        
+        if dueCardsCount > 0 {
+            cell.descriptionLabel.text = "\(dueCardsCount) Due, \(cardsCount) Total"
+        } else {
+            cell.descriptionLabel.text = "Well done! No due cards. \(cardsCount) Total"
+        }
     }
     
     private func configureCardsViewController(forSegue segue: UIStoryboardSegue,

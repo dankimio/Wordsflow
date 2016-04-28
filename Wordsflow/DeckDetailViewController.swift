@@ -30,8 +30,7 @@ class DeckDetailViewController: UIViewController {
             cardsViewController.cards = deck.cards
         case "StudyCards":
             let studyViewController = segue.destinationViewController as! StudyViewController
-            let dueToday = NSPredicate(format: "dueDate < %@", NSDate())
-            studyViewController.cardsToStudy = deck.cards.filter(dueToday).sorted("dueDate")
+            studyViewController.cardsToStudy = deck.dueCards
         default: return
         }
     }
