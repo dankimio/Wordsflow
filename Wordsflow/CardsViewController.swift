@@ -11,23 +11,15 @@ import RealmSwift
 
 class CardsViewController: UITableViewController {
     
-    var searchController: UISearchController = {
-        let controller = UISearchController(searchResultsController: nil)
-        controller.hidesNavigationBarDuringPresentation = false
-        controller.dimsBackgroundDuringPresentation = false
-        controller.definesPresentationContext = true
-        controller.searchBar.sizeToFit()
-        return controller
-    }()
-    
     let realm = try! Realm()
+    
+    var searchController: UISearchController!
     var cards: List<Card>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchController.loadViewIfNeeded()
-        tableView.tableHeaderView = searchController.searchBar
+        configureSearchController()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -83,6 +75,17 @@ class CardsViewController: UITableViewController {
         cell.textLabel!.text = card.front
         cell.detailTextLabel!.text = card.back
     }
+    
+    private func configureSearchController() {
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        searchController.searchBar.sizeToFit()
+        
+//        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
+    }
 
     // MARK: - Navigation
 
@@ -121,4 +124,12 @@ extension CardsViewController: EditCardViewControllerDelegate {
         }
     }
 
+}
+
+extension CardsViewController: UISearchBarDelegate, UISearchResultsUpdating {
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        tableView.reloadData()
+    }
+    
 }

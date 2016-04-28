@@ -460,7 +460,7 @@
         <!--Cards-->
         <scene sceneID="pca-PM-N8C">
             <objects>
-                <tableViewController id="8ab-dl-eAs" customClass="CardsViewController" customModule="Wordsflow" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController definesPresentationContext="YES" id="8ab-dl-eAs" customClass="CardsViewController" customModule="Wordsflow" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="s3x-39-q1u">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
