@@ -15,9 +15,12 @@ class CardsViewController: UITableViewController {
     
     var searchController: UISearchController!
     var cards: List<Card>!
+    var results: Results<Card>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        filterResults()
         
         configureSearchController()
     }
@@ -31,7 +34,7 @@ class CardsViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cards.count
+        return results.count
     }
 
     override func tableView(tableView: UITableView,
@@ -39,7 +42,7 @@ class CardsViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("CardCell",
                                                                forIndexPath: indexPath)
-        configure(cell, forCard: cards[indexPath.row])
+        configure(cell, forCard: results[indexPath.row])
         
         return cell
     }
@@ -82,9 +85,12 @@ class CardsViewController: UITableViewController {
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
         searchController.searchBar.sizeToFit()
-        
-//        definesPresentationContext = true
+
         tableView.tableHeaderView = searchController.searchBar
+    }
+    
+    private func filterResults(query: String = "") {
+        results = cards.filter("front CONTAINS[c] %@ OR back CONTAINS[c] %@", query, query)
     }
 
     // MARK: - Navigation
@@ -129,6 +135,8 @@ extension CardsViewController: EditCardViewControllerDelegate {
 extension CardsViewController: UISearchBarDelegate, UISearchResultsUpdating {
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
+        let query = searchController.searchBar.text ?? ""
+        filterResults(query)
         tableView.reloadData()
     }
     
