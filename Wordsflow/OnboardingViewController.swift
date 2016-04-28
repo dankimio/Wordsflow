@@ -27,6 +27,10 @@ class OnboardingViewController: UIPageViewController {
         delegate = self
         dataSource = self
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
 
 }
 

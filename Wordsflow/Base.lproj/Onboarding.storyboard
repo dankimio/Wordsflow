@@ -8,10 +8,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Hello-->
         <scene sceneID="rXs-RL-iyj">
             <objects>
-                <viewController storyboardIdentifier="Onboarding" id="I6L-S5-0WK" sceneMemberID="viewController">
+                <viewController id="I6L-S5-0WK" customClass="OnboardingContainerViewController" customModule="Wordsflow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0E0-q9-ubI"/>
                         <viewControllerLayoutGuide type="bottom" id="8uN-A0-8G0"/>
@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWa-gY-55x">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <connections>
                                     <segue destination="75T-go-6rg" kind="embed" id="CBR-D0-tsx"/>
                                 </connections>
@@ -35,10 +35,19 @@
                             <constraint firstItem="bWa-gY-55x" firstAttribute="leading" secondItem="GrU-HT-Sez" secondAttribute="leading" id="j69-Oo-4ZM"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Hello" id="kTw-rI-sOr">
+                        <barButtonItem key="rightBarButtonItem" title="Skip" id="97H-ET-2n2">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="skip" destination="I6L-S5-0WK" id="Qfx-uO-JGL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BX3-Qj-bXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="PLB-ti-jy7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1138" y="473"/>
+            <point key="canvasLocation" x="1950" y="473"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="3Bg-jv-xzA">
@@ -53,7 +62,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HZQ-kb-SaK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1841" y="473"/>
+            <point key="canvasLocation" x="2653" y="473"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="IdC-ju-1cY">
@@ -64,11 +73,11 @@
                         <viewControllerLayoutGuide type="bottom" id="62S-Sf-91E"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Wou-ps-p5b">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="M4S-6c-OgN">
-                                <rect key="frame" x="52" y="177" width="496" height="139"/>
+                                <rect key="frame" x="52" y="158" width="496" height="139"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Populate with sample data" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqX-Zn-aan">
                                         <rect key="frame" x="0.0" y="0.0" width="496" height="33"/>
@@ -86,7 +95,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhH-ee-5EC" customClass="RoundedButton" customModule="Wordsflow" customModuleProvider="target">
-                                <rect key="frame" x="240" y="404" width="121" height="38"/>
+                                <rect key="frame" x="240" y="385" width="121" height="38"/>
                                 <inset key="contentEdgeInsets" minX="30" minY="10" maxX="30" maxY="10"/>
                                 <state key="normal" title="Populate">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -125,11 +134,11 @@
                         <viewControllerLayoutGuide type="bottom" id="jkD-84-isB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ADJ-92-lxb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2k-ab-nrZ" customClass="RoundedButton" customModule="Wordsflow" customModuleProvider="target">
-                                <rect key="frame" x="203" y="404" width="195" height="38"/>
+                                <rect key="frame" x="203" y="385" width="195" height="38"/>
                                 <inset key="contentEdgeInsets" minX="30" minY="10" maxX="30" maxY="10"/>
                                 <state key="normal" title="Enable notifications">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -144,7 +153,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="ig6-Iw-fIh">
-                                <rect key="frame" x="49" y="178" width="503" height="138"/>
+                                <rect key="frame" x="49" y="159" width="503" height="138"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejG-TY-jeJ">
                                         <rect key="frame" x="0.0" y="0.0" width="146" height="33"/>
@@ -186,11 +195,11 @@
                         <viewControllerLayoutGuide type="bottom" id="u6D-DS-tfE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bYl-2t-azR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="WlD-4I-p2k">
-                                <rect key="frame" x="61" y="1" width="479" height="462"/>
+                                <rect key="frame" x="61" y="-17" width="479" height="462"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AE0-wS-6Ob">
                                         <rect key="frame" x="0.0" y="0.0" width="479" height="300"/>
@@ -219,7 +228,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNi-0A-crH" customClass="RoundedButton" customModule="Wordsflow" customModuleProvider="target">
-                                <rect key="frame" x="250" y="507" width="101" height="38"/>
+                                <rect key="frame" x="250" y="489" width="101" height="38"/>
                                 <inset key="contentEdgeInsets" minX="30" minY="10" maxX="30" maxY="10"/>
                                 <state key="normal" title="Finish">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -232,6 +241,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="PLB-ti-jy7" kind="unwind" unwindAction="finish:" id="GA6-l1-91y"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -264,11 +276,11 @@
                         <viewControllerLayoutGuide type="bottom" id="4Nn-s1-ZTn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mq1-NC-6IC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="O8w-oe-jIA">
-                                <rect key="frame" x="54" y="190" width="492" height="201"/>
+                                <rect key="frame" x="54" y="168" width="492" height="201"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Wordsflow!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJ9-0p-fcG">
                                         <rect key="frame" x="0.0" y="0.0" width="492" height="33"/>
@@ -304,6 +316,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhH-dQ-TuM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1138" y="1231"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lNp-Ws-wmV">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kS3-iS-Vdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="Onboarding" automaticallyAdjustsScrollViewInsets="NO" id="id7-RE-OZR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="bEK-3w-K9O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.039215686270000001" green="0.27450980390000002" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="I6L-S5-0WK" kind="relationship" relationship="rootViewController" id="j2y-5r-iRB"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1138" y="473"/>
         </scene>
     </scenes>
 </document>
