@@ -28,6 +28,7 @@
 		37ADCB191CD17C7D00F93389 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37ADCB171CD17C7D00F93389 /* Onboarding.storyboard */; };
 		37ADCB1B1CD23A4400F93389 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ADCB1A1CD23A4400F93389 /* OnboardingContainerViewController.swift */; };
 		37ADCB1D1CD23D1000F93389 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ADCB1C1CD23D1000F93389 /* Settings.swift */; };
+		37ADCB1F1CD2629D00F93389 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ADCB1E1CD2629D00F93389 /* OnboardingPageViewController.swift */; };
 		40DD06B2BD8594DBF8F112A1 /* Pods_Wordsflow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A0F2E41E7B1718695E3B41 /* Pods_Wordsflow.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		37ADCB181CD17C7D00F93389 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Onboarding.storyboard; sourceTree = "<group>"; };
 		37ADCB1A1CD23A4400F93389 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		37ADCB1C1CD23D1000F93389 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		37ADCB1E1CD2629D00F93389 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		5CC3D62D1AE408C4DE7679D3 /* Pods-Wordsflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsflow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsflow/Pods-Wordsflow.debug.xcconfig"; sourceTree = "<group>"; };
 		A6A0F2E41E7B1718695E3B41 /* Pods_Wordsflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wordsflow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB8F62DF007090F57934863 /* Pods-Wordsflow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsflow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsflow/Pods-Wordsflow.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				37ADCB131CD13A7300F93389 /* FinishViewController.swift */,
 				37ADCB151CD171F400F93389 /* OnboardingViewController.swift */,
 				37ADCB1A1CD23A4400F93389 /* OnboardingContainerViewController.swift */,
+				37ADCB1E1CD2629D00F93389 /* OnboardingPageViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				371007A81CCB5F1F00D9C667 /* EditDeckViewController.swift in Sources */,
 				37703F9E1CC94B4100A96980 /* DecksViewController.swift in Sources */,
 				371650E11CC9A09A00897E32 /* IndicatorView.swift in Sources */,
+				37ADCB1F1CD2629D00F93389 /* OnboardingPageViewController.swift in Sources */,
 				371650DE1CC9877100897E32 /* DeckDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

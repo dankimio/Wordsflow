@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="2653" y="473"/>
         </scene>
-        <!--View Controller-->
+        <!--Onboarding Page View Controller-->
         <scene sceneID="IdC-ju-1cY">
             <objects>
-                <viewController storyboardIdentifier="Second" id="2JK-GS-Xgk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Second" id="2JK-GS-Xgk" customClass="OnboardingPageViewController" customModule="Wordsflow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f3j-ea-V89"/>
                         <viewControllerLayoutGuide type="bottom" id="62S-Sf-91E"/>
@@ -108,6 +108,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="populate" destination="2JK-GS-Xgk" eventType="touchUpInside" id="tUz-g1-3iZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -125,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="1841" y="1231"/>
         </scene>
-        <!--View Controller-->
+        <!--Onboarding Page View Controller-->
         <scene sceneID="Fpx-1p-wrH">
             <objects>
-                <viewController storyboardIdentifier="Third" id="ujX-uN-Tk1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Third" id="ujX-uN-Tk1" customClass="OnboardingPageViewController" customModule="Wordsflow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="APb-7J-KMj"/>
                         <viewControllerLayoutGuide type="bottom" id="jkD-84-isB"/>
@@ -151,6 +154,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registerNotifications" destination="ujX-uN-Tk1" eventType="touchUpInside" id="Ad9-Zh-B5N"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="ig6-Iw-fIh">
                                 <rect key="frame" x="49" y="159" width="503" height="138"/>
@@ -186,10 +192,10 @@
             </objects>
             <point key="canvasLocation" x="2570" y="1231"/>
         </scene>
-        <!--View Controller-->
+        <!--Onboarding Page View Controller-->
         <scene sceneID="CWl-12-afq">
             <objects>
-                <viewController storyboardIdentifier="Fourth" id="evW-AP-b3r" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Fourth" id="evW-AP-b3r" customClass="OnboardingPageViewController" customModule="Wordsflow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v7g-Mw-a9L"/>
                         <viewControllerLayoutGuide type="bottom" id="u6D-DS-tfE"/>
@@ -267,10 +273,10 @@
             </objects>
             <point key="canvasLocation" x="3278" y="1231"/>
         </scene>
-        <!--View Controller-->
+        <!--Onboarding Page View Controller-->
         <scene sceneID="cKv-fs-cB3">
             <objects>
-                <viewController storyboardIdentifier="First" id="v3P-xO-eg7" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="First" id="v3P-xO-eg7" customClass="OnboardingPageViewController" customModule="Wordsflow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t0P-Sp-Tkb"/>
                         <viewControllerLayoutGuide type="bottom" id="4Nn-s1-ZTn"/>
