@@ -32,6 +32,7 @@
 		37ADCB211CD2664F00F93389 /* Populator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ADCB201CD2664F00F93389 /* Populator.swift */; };
 		37ADCB241CD26B2E00F93389 /* world_capitals.json in Resources */ = {isa = PBXBuildFile; fileRef = 37ADCB231CD26B2E00F93389 /* world_capitals.json */; };
 		37ADCB261CD2751C00F93389 /* us_capitals.json in Resources */ = {isa = PBXBuildFile; fileRef = 37ADCB251CD2751C00F93389 /* us_capitals.json */; };
+		37ADCB281CD2C6FF00F93389 /* CardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ADCB271CD2C6FF00F93389 /* CardManager.swift */; };
 		40DD06B2BD8594DBF8F112A1 /* Pods_Wordsflow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A0F2E41E7B1718695E3B41 /* Pods_Wordsflow.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		37ADCB201CD2664F00F93389 /* Populator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Populator.swift; sourceTree = "<group>"; };
 		37ADCB231CD26B2E00F93389 /* world_capitals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = world_capitals.json; sourceTree = "<group>"; };
 		37ADCB251CD2751C00F93389 /* us_capitals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = us_capitals.json; sourceTree = "<group>"; };
+		37ADCB271CD2C6FF00F93389 /* CardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardManager.swift; sourceTree = "<group>"; };
 		5CC3D62D1AE408C4DE7679D3 /* Pods-Wordsflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsflow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsflow/Pods-Wordsflow.debug.xcconfig"; sourceTree = "<group>"; };
 		A6A0F2E41E7B1718695E3B41 /* Pods_Wordsflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wordsflow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB8F62DF007090F57934863 /* Pods-Wordsflow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsflow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsflow/Pods-Wordsflow.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				37703FA81CC9762B00A96980 /* Deck.swift */,
 				37ADCB1C1CD23D1000F93389 /* Settings.swift */,
 				37ADCB201CD2664F00F93389 /* Populator.swift */,
+				37ADCB271CD2C6FF00F93389 /* CardManager.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				37703F8C1CC94A1E00A96980 /* AppDelegate.swift in Sources */,
 				371007AA1CCB9CD500D9C667 /* EditCardViewController.swift in Sources */,
 				37703FA21CC9651E00A96980 /* Scheduler.swift in Sources */,
+				37ADCB281CD2C6FF00F93389 /* CardManager.swift in Sources */,
 				371007A81CCB5F1F00D9C667 /* EditDeckViewController.swift in Sources */,
 				37703F9E1CC94B4100A96980 /* DecksViewController.swift in Sources */,
 				37ADCB211CD2664F00F93389 /* Populator.swift in Sources */,
