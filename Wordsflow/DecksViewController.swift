@@ -30,6 +30,12 @@ class DecksViewController: UITableViewController {
             tableView.deselectRowAtIndexPath(selectedIndexPath, animated: true)
         }
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        performSegueWithIdentifier("ShowOnboarding", sender: self)
+    }
 
     // MARK: - Table view data source
 

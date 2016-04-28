@@ -76,6 +76,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="YHc-Ws-0WW" kind="show" identifier="ShowCards" id="cAX-bx-Skc"/>
+                        <segue destination="dHj-3q-KTp" kind="presentation" identifier="ShowOnboarding" id="oCl-jv-1Mu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ywi-sz-BMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -213,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3T-Yh-xkX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2212" y="1174"/>
+            <point key="canvasLocation" x="2224" y="1174"/>
         </scene>
         <!--Study View Controller-->
         <scene sceneID="ric-xc-jU6">
@@ -688,6 +689,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AKU-Sx-9CH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2885" y="1875"/>
+        </scene>
+        <!--Onboarding-->
+        <scene sceneID="1vs-Ha-2iw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Onboarding" referencedIdentifier="Onboarding" id="dHj-3q-KTp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10W-td-F8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1975.5" y="729"/>
         </scene>
     </scenes>
 </document>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="rXs-RL-iyj">
+            <objects>
+                <viewController storyboardIdentifier="Onboarding" id="I6L-S5-0WK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0E0-q9-ubI"/>
+                        <viewControllerLayoutGuide type="bottom" id="8uN-A0-8G0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GrU-HT-Sez">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWa-gY-55x">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <connections>
+                                    <segue destination="75T-go-6rg" kind="embed" id="CBR-D0-tsx"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8uN-A0-8G0" firstAttribute="top" secondItem="bWa-gY-55x" secondAttribute="bottom" id="5LU-66-X23"/>
+                            <constraint firstAttribute="trailing" secondItem="bWa-gY-55x" secondAttribute="trailing" id="7gN-fS-g3y"/>
+                            <constraint firstItem="bWa-gY-55x" firstAttribute="top" secondItem="0E0-q9-ubI" secondAttribute="bottom" id="JWt-Qb-VTA"/>
+                            <constraint firstItem="bWa-gY-55x" firstAttribute="leading" secondItem="GrU-HT-Sez" secondAttribute="leading" id="j69-Oo-4ZM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BX3-Qj-bXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1138" y="473"/>
+        </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="3Bg-jv-xzA">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="75T-go-6rg" customClass="OnboardingViewController" customModule="Wordsflow" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="2JK-GS-Xgk" kind="show" identifier="Second" id="kCu-6c-Ufq"/>
+                        <segue destination="v3P-xO-eg7" kind="show" identifier="First" id="VQD-dz-sPb"/>
+                        <segue destination="ujX-uN-Tk1" kind="show" identifier="Third" id="GyX-hZ-o3G"/>
+                        <segue destination="evW-AP-b3r" kind="show" identifier="Fourth" id="ejB-Qg-Tdb"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HZQ-kb-SaK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1841" y="473"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IdC-ju-1cY">
+            <objects>
+                <viewController storyboardIdentifier="Second" id="2JK-GS-Xgk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f3j-ea-V89"/>
+                        <viewControllerLayoutGuide type="bottom" id="62S-Sf-91E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wou-ps-p5b">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="M4S-6c-OgN">
+                                <rect key="frame" x="52" y="177" width="496" height="139"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Populate with sample data" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqX-Zn-aan">
+                                        <rect key="frame" x="0.0" y="0.0" width="496" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0i-3X-j6i">
+                                        <rect key="frame" x="0.0" y="77" width="496" height="62"/>
+                                        <string key="text">Wordsflow comes with a sample set of decks that serves as an example. You can skip this step and start using your own decks with cards right away.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhH-ee-5EC" customClass="RoundedButton" customModule="Wordsflow" customModuleProvider="target">
+                                <rect key="frame" x="240" y="404" width="121" height="38"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="10" maxX="30" maxY="10"/>
+                                <state key="normal" title="Populate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultColor">
+                                        <color key="value" red="0.078431372550000003" green="0.31372549020000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fhH-ee-5EC" firstAttribute="top" secondItem="k0i-3X-j6i" secondAttribute="bottom" constant="88" id="VYw-b8-IZe"/>
+                            <constraint firstItem="fhH-ee-5EC" firstAttribute="centerX" secondItem="Wou-ps-p5b" secondAttribute="centerX" id="gP3-XA-5RG"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="M4S-6c-OgN" secondAttribute="trailing" constant="22" id="l1l-Mb-MtX"/>
+                            <constraint firstItem="M4S-6c-OgN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Wou-ps-p5b" secondAttribute="leadingMargin" constant="22" id="ljp-91-0yx"/>
+                            <constraint firstItem="M4S-6c-OgN" firstAttribute="centerX" secondItem="Wou-ps-p5b" secondAttribute="centerX" id="wUh-Vt-hG1"/>
+                            <constraint firstItem="M4S-6c-OgN" firstAttribute="centerY" secondItem="Wou-ps-p5b" secondAttribute="centerY" multiplier="0.85" id="yJK-Vj-aqO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z5g-q6-6QW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1841" y="1231"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Fpx-1p-wrH">
+            <objects>
+                <viewController storyboardIdentifier="Third" id="ujX-uN-Tk1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="APb-7J-KMj"/>
+                        <viewControllerLayoutGuide type="bottom" id="jkD-84-isB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ADJ-92-lxb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2k-ab-nrZ" customClass="RoundedButton" customModule="Wordsflow" customModuleProvider="target">
+                                <rect key="frame" x="203" y="404" width="195" height="38"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="10" maxX="30" maxY="10"/>
+                                <state key="normal" title="Enable notifications">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultColor">
+                                        <color key="value" red="0.078431372550000003" green="0.31372549020000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="ig6-Iw-fIh">
+                                <rect key="frame" x="49" y="178" width="503" height="138"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejG-TY-jeJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="146" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q44-F2-N3Q">
+                                        <rect key="frame" x="0.0" y="77" width="503" height="61"/>
+                                        <string key="text">It is important to review cards regularly. Wordsflow can notify you about review sessions (1 per day max). You can disable notifications later at any time.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o2k-ab-nrZ" firstAttribute="top" secondItem="ig6-Iw-fIh" secondAttribute="bottom" constant="88" id="Av1-E1-u3q"/>
+                            <constraint firstItem="o2k-ab-nrZ" firstAttribute="centerX" secondItem="ADJ-92-lxb" secondAttribute="centerX" id="Bcm-Ye-nwx"/>
+                            <constraint firstItem="ig6-Iw-fIh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ADJ-92-lxb" secondAttribute="leadingMargin" constant="22" id="D2N-Ho-KfF"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="ig6-Iw-fIh" secondAttribute="trailing" constant="22" id="STD-Pj-Yow"/>
+                            <constraint firstItem="ig6-Iw-fIh" firstAttribute="centerX" secondItem="ADJ-92-lxb" secondAttribute="centerX" id="r0Z-ea-UgV"/>
+                            <constraint firstItem="ig6-Iw-fIh" firstAttribute="centerY" secondItem="ADJ-92-lxb" secondAttribute="centerY" multiplier="0.85" id="yxG-6u-32U"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqr-R0-shJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2570" y="1231"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CWl-12-afq">
+            <objects>
+                <viewController storyboardIdentifier="Fourth" id="evW-AP-b3r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v7g-Mw-a9L"/>
+                        <viewControllerLayoutGuide type="bottom" id="u6D-DS-tfE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bYl-2t-azR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="WlD-4I-p2k">
+                                <rect key="frame" x="61" y="1" width="479" height="462"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AE0-wS-6Ob">
+                                        <rect key="frame" x="0.0" y="0.0" width="479" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="AE0-wS-6Ob" secondAttribute="height" constant="1" id="epG-eB-e0u"/>
+                                            <constraint firstAttribute="height" constant="300" id="sfg-kl-a0z"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="epG-eB-e0u"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extensions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF6-x5-A2I">
+                                        <rect key="frame" x="0.0" y="344" width="479" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wordsflow comes with an Apple Watch app as well as Today View extension. " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vps-Lq-j18">
+                                        <rect key="frame" x="0.0" y="421" width="479" height="41"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNi-0A-crH" customClass="RoundedButton" customModule="Wordsflow" customModuleProvider="target">
+                                <rect key="frame" x="250" y="507" width="101" height="38"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="10" maxX="30" maxY="10"/>
+                                <state key="normal" title="Finish">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultColor">
+                                        <color key="value" red="0.078431372550000003" green="0.31372549020000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="WlD-4I-p2k" secondAttribute="trailing" constant="22" id="GuW-4N-oK3"/>
+                            <constraint firstItem="WlD-4I-p2k" firstAttribute="centerX" secondItem="bYl-2t-azR" secondAttribute="centerX" id="Mip-CF-3Wm"/>
+                            <constraint firstItem="WlD-4I-p2k" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bYl-2t-azR" secondAttribute="leadingMargin" constant="22" id="SmO-gF-T9b"/>
+                            <constraint firstItem="WlD-4I-p2k" firstAttribute="centerY" secondItem="bYl-2t-azR" secondAttribute="centerY" multiplier="0.8" id="gVA-Bw-Rvo"/>
+                            <constraint firstItem="WlD-4I-p2k" firstAttribute="centerY" secondItem="bYl-2t-azR" secondAttribute="centerY" multiplier="0.8" id="jS8-wy-R3I"/>
+                            <constraint firstItem="XNi-0A-crH" firstAttribute="top" secondItem="WlD-4I-p2k" secondAttribute="bottom" constant="44" id="ofi-ea-UYy"/>
+                            <constraint firstItem="XNi-0A-crH" firstAttribute="centerX" secondItem="bYl-2t-azR" secondAttribute="centerX" id="tXV-Zr-xj1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gVA-Bw-Rvo"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ty3-7j-T92" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3278" y="1231"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cKv-fs-cB3">
+            <objects>
+                <viewController storyboardIdentifier="First" id="v3P-xO-eg7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t0P-Sp-Tkb"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Nn-s1-ZTn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mq1-NC-6IC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="O8w-oe-jIA">
+                                <rect key="frame" x="54" y="190" width="492" height="201"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Wordsflow!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJ9-0p-fcG">
+                                        <rect key="frame" x="0.0" y="0.0" width="492" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skc-fi-noU">
+                                        <rect key="frame" x="0.0" y="77" width="492" height="60"/>
+                                        <string key="text">Wordsflow will help you learn everything: words, formulas, dates and facts. Create a deck of two-sided flashcards and memorize information using spaced repetition.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe to continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiJ-8a-22G">
+                                        <rect key="frame" x="0.0" y="181" width="492" height="20"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="O8w-oe-jIA" secondAttribute="trailing" constant="22" id="5Rh-7v-STU"/>
+                            <constraint firstItem="O8w-oe-jIA" firstAttribute="centerY" secondItem="mq1-NC-6IC" secondAttribute="centerY" id="JRP-CJ-mqK"/>
+                            <constraint firstItem="O8w-oe-jIA" firstAttribute="centerX" secondItem="mq1-NC-6IC" secondAttribute="centerX" id="LCh-Jd-wQQ"/>
+                            <constraint firstItem="O8w-oe-jIA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mq1-NC-6IC" secondAttribute="leadingMargin" constant="22" id="QCE-Pz-rpR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lhH-dQ-TuM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1138" y="1231"/>
+        </scene>
+    </scenes>
+</document>
