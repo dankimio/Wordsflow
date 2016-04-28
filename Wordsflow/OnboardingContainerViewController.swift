@@ -19,6 +19,7 @@ class OnboardingContainerViewController: UIViewController {
     }
     
     private func dismissOnboarding() {
+        Settings.sharedInstance.firstLaunch = false
         dismissViewControllerAnimated(true, completion: nil)
     }
     

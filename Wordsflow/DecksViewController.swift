@@ -34,7 +34,9 @@ class DecksViewController: UITableViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        performSegueWithIdentifier("ShowOnboarding", sender: self)
+        if Settings.sharedInstance.firstLaunch {
+            performSegueWithIdentifier("ShowOnboarding", sender: self)
+        }
     }
 
     // MARK: - Table view data source
