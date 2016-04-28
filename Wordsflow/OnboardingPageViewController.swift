@@ -11,7 +11,7 @@ import UIKit
 class OnboardingPageViewController: UIViewController {
     
     @IBAction func populate() {
-        print("populate")
+        Populator().populate()
     }
     
     @IBAction func registerNotifications() {
