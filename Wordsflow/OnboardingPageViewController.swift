@@ -15,7 +15,9 @@ class OnboardingPageViewController: UIViewController {
     }
     
     @IBAction func registerNotifications() {
-        print("registerNotifications")
+        let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound],
+                                                              categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
     }
     
 }
