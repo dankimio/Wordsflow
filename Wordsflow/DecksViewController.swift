@@ -36,6 +36,8 @@ class DecksViewController: UITableViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+//        Settings.sharedInstance.firstLaunch = true
+        
         if Settings.sharedInstance.firstLaunch {
             performSegueWithIdentifier("ShowOnboarding", sender: self)
         }
