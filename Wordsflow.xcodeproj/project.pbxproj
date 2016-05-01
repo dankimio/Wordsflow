@@ -288,8 +288,8 @@
 		37703FA51CC975BC00A96980 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				37703F9D1CC94B4100A96980 /* DecksViewController.swift */,
 				37703F9F1CC9540F00A96980 /* CardsViewController.swift */,
+				37703F9D1CC94B4100A96980 /* DecksViewController.swift */,
 				371650DD1CC9877100897E32 /* DeckDetailViewController.swift */,
 				371007A71CCB5F1F00D9C667 /* EditDeckViewController.swift */,
 				371007A91CCB9CD500D9C667 /* EditCardViewController.swift */,

@@ -135,6 +135,7 @@ class DecksViewController: UITableViewController {
         
         let indexPath = tableView.indexPathForCell(cell)!
         let cardsViewController = segue.destinationViewController as! DeckDetailViewController
+
         cardsViewController.deck = decks[indexPath.row]
     }
     

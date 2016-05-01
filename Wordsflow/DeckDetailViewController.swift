@@ -10,6 +10,9 @@ import UIKit
 
 class DeckDetailViewController: UIViewController {
     
+    @IBOutlet weak var dueCountLabel: UILabel!
+    @IBOutlet weak var totalCountLabel: UILabel!
+
     var deck: Deck!
 
     override func viewDidLoad() {
@@ -17,6 +20,8 @@ class DeckDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         title = deck.name
+        dueCountLabel.text = "\(deck.dueCards.count)"
+        totalCountLabel.text = "\(deck.cards.count)"
     }
 
     // MARK: - Navigation
