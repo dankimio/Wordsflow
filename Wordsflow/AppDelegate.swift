@@ -104,7 +104,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func cancelNotifications() {
         print("Cancelling notifications")
 
-        UIApplication.sharedApplication().cancelAllLocalNotifications()
+        let application = UIApplication.sharedApplication()
+        application.applicationIconBadgeNumber = 0
+        application.cancelAllLocalNotifications()
     }
 
 }
