@@ -8,7 +8,7 @@
 
 import WatchKit
 import Foundation
-
+import WatchConnectivity
 
 class StudyInterfaceController: WKInterfaceController {
 
@@ -61,6 +61,14 @@ extension StudyInterfaceController: AnswerInterfaceControllerDelegate {
         card.studiedAt = NSDate()
 
         // Send data back to watch using connectivity
+        let session = WCSession.defaultSession()
+        let userInfo: [String: AnyObject] = [
+            "deck": deck.name,
+            "front": card.front,
+            "back": card.back,
+            "quality": quality
+        ]
+        session.transferUserInfo(userInfo)
 
         // Remove card from data model
         if let index = deck.cards.indexOf({ $0 === card }) {
