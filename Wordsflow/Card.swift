@@ -21,4 +21,16 @@ class Card: Object {
     dynamic var dueDate: NSDate = NSDate()
     dynamic var studiedAt: NSDate?
 
+    func toDictionary() -> [String: AnyObject] {
+        let result: [String: AnyObject]
+
+        result = [
+            "front": front,
+            "back": back,
+            "dueDate": dueDate
+        ]
+
+        return result
+    }
+
 }

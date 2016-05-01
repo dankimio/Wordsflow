@@ -8,16 +8,19 @@
 
 import UIKit
 import RealmSwift
+import WatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var session = WCSession.defaultSession()
 
     func application(application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Customization after application launch.
         configureRealm()
+        configureSession()
         cancelNotifications()
         
         return true
@@ -37,8 +40,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // to its current state in case it is terminated later.
         // If your application supports background execution,
         // this method is called instead of applicationWillTerminate: when the user quits.
-        
+
+        print("DIDENTERBACKGROUND")
         scheduleNotification()
+        syncData()
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
@@ -104,8 +109,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func cancelNotifications() {
         print("Cancelling notifications")
 
-        UIApplication.sharedApplication().cancelAllLocalNotifications()
+        let application = UIApplication.sharedApplication()
+        application.applicationIconBadgeNumber = 0
+        application.cancelAllLocalNotifications()
+    }
+
+    private func configureSession() {
+        guard WCSession.isSupported() else { return }
+
+        session.delegate = self
+        session.activateSession()
+    }
+
+    private func syncData() {
+        let realm = try! Realm()
+
+        let context: [String: AnyObject] = [
+            "decks": realm.objects(Deck).map { $0.toDictionary() }
+        ]
+
+        print("TRYING TO UPDATE CONTEXT")
+
+        do {
+            try session.updateApplicationContext(context)
+            print("CONTEXT UPDATED")
+        } catch {
+            print("Error updating context")
+        }
     }
 
 }
 
+extension AppDelegate: WCSessionDelegate {
+
+    func session(session: WCSession, didReceiveUserInfo userInfo: [String : AnyObject]) {
+        print("Received user info")
+    }
+
+}

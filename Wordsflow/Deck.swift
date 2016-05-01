@@ -19,4 +19,13 @@ class Deck: Object {
         return cards.filter(dueToday).sorted("dueDate")
     }
 
+    func toDictionary() -> [String: AnyObject] {
+        var result = [String: AnyObject]()
+
+        result["name"] = name
+        result["cards"] = cards.map { $0.toDictionary() }
+
+        return result
+    }
+
 }
