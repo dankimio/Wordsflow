@@ -19,7 +19,8 @@
                                         </items>
                                     </group>
                                     <connections>
-                                        <outlet property="deckNameLabel" destination="wir-eh-Tjx" id="vfs-9e-Iv8"/>
+                                        <outlet property="nameLabel" destination="wir-eh-Tjx" id="XoD-ql-2s9"/>
+                                        <segue destination="paa-Nc-tOM" kind="push" id="kWy-W1-yze"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -31,6 +32,61 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Eoi-kH-WQ9">
+            <objects>
+                <controller id="paa-Nc-tOM">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="QaS-e5-9hu">
+                            <items>
+                                <label alignment="center" text="Label" id="Lqg-nB-uM2"/>
+                                <button width="1" alignment="left" verticalAlignment="bottom" title="Show Answer" id="UvJ-Ot-omS">
+                                    <connections>
+                                        <segue destination="tfZ-eO-eIP" kind="modal" id="63e-oD-BIJ"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="505" y="347"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Y2a-HC-gSb">
+            <objects>
+                <controller id="tfZ-eO-eIP">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="MmT-Am-mbc">
+                            <items>
+                                <group width="1" alignment="left" layout="vertical" id="4iF-Fg-ybB">
+                                    <items>
+                                        <label alignment="center" text="Back" id="2Wj-ah-j7w"/>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" verticalAlignment="bottom" layout="vertical" id="3J2-8l-QLA">
+                                    <items>
+                                        <group width="1" alignment="left" id="BSs-7M-bM3">
+                                            <items>
+                                                <button width="0.5" alignment="left" title="Again" id="KM8-Jp-dH6"/>
+                                                <button width="0.5" alignment="left" title="Hard" id="TvB-eC-hY2"/>
+                                            </items>
+                                        </group>
+                                        <group width="1" alignment="left" id="pqx-3k-syC">
+                                            <items>
+                                                <button width="0.5" alignment="left" title="Good" id="pps-de-ASA"/>
+                                                <button width="0.5" alignment="left" title="Easy" id="Bnf-vv-aid"/>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="770" y="347"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
