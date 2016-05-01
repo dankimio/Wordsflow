@@ -43,6 +43,8 @@
 		37ADCB241CD26B2E00F93389 /* world_capitals.json in Resources */ = {isa = PBXBuildFile; fileRef = 37ADCB231CD26B2E00F93389 /* world_capitals.json */; };
 		37ADCB261CD2751C00F93389 /* us_capitals.json in Resources */ = {isa = PBXBuildFile; fileRef = 37ADCB251CD2751C00F93389 /* us_capitals.json */; };
 		37ADCB281CD2C6FF00F93389 /* CardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ADCB271CD2C6FF00F93389 /* CardManager.swift */; };
+		37E21BC81CD5F8A1002E383E /* DeckRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E21BC71CD5F8A1002E383E /* DeckRowController.swift */; };
+		37E21BCA1CD5FDF6002E383E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E21BC91CD5FDF6002E383E /* DataModel.swift */; };
 		40DD06B2BD8594DBF8F112A1 /* Pods_Wordsflow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A0F2E41E7B1718695E3B41 /* Pods_Wordsflow.framework */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +132,8 @@
 		37ADCB231CD26B2E00F93389 /* world_capitals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = world_capitals.json; sourceTree = "<group>"; };
 		37ADCB251CD2751C00F93389 /* us_capitals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = us_capitals.json; sourceTree = "<group>"; };
 		37ADCB271CD2C6FF00F93389 /* CardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardManager.swift; sourceTree = "<group>"; };
+		37E21BC71CD5F8A1002E383E /* DeckRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckRowController.swift; sourceTree = "<group>"; };
+		37E21BC91CD5FDF6002E383E /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		5CC3D62D1AE408C4DE7679D3 /* Pods-Wordsflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsflow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsflow/Pods-Wordsflow.debug.xcconfig"; sourceTree = "<group>"; };
 		A6A0F2E41E7B1718695E3B41 /* Pods_Wordsflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wordsflow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB8F62DF007090F57934863 /* Pods-Wordsflow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordsflow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wordsflow/Pods-Wordsflow.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 				373AAD5B1CD54B03000D4098 /* Assets.xcassets */,
 				373AAD5D1CD54B03000D4098 /* Info.plist */,
 				373AAD4F1CD54B03000D4098 /* Supporting Files */,
+				37E21BC71CD5F8A1002E383E /* DeckRowController.swift */,
+				37E21BC91CD5FDF6002E383E /* DataModel.swift */,
 			);
 			path = "Wordsflow WatchKit App Extension";
 			sourceTree = "<group>";
@@ -486,9 +492,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37E21BCA1CD5FDF6002E383E /* DataModel.swift in Sources */,
 				373AAD561CD54B03000D4098 /* NotificationController.swift in Sources */,
 				373AAD541CD54B03000D4098 /* ExtensionDelegate.swift in Sources */,
 				373AAD5A1CD54B03000D4098 /* ComplicationController.swift in Sources */,
+				37E21BC81CD5F8A1002E383E /* DeckRowController.swift in Sources */,
 				373AAD521CD54B03000D4098 /* InterfaceController.swift in Sources */,
 				373AAD581CD54B03000D4098 /* GlanceController.swift in Sources */,
 			);
@@ -751,6 +759,7 @@
 				373AAD641CD54B03000D4098 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		373AAD671CD54B03000D4098 /* Build configuration list for PBXNativeTarget "Wordsflow WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -759,6 +768,7 @@
 				373AAD621CD54B03000D4098 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37703F831CC94A1E00A96980 /* Build configuration list for PBXProject "Wordsflow" */ = {
 			isa = XCConfigurationList;

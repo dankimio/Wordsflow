@@ -7,15 +7,18 @@
 //
 
 import WatchKit
-import Foundation
-
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var decksTable: WKInterfaceTable!
+    
+    var dataModel = DataModel()
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        configureDecksTable()
     }
 
     override func willActivate() {
@@ -23,9 +26,13 @@ class InterfaceController: WKInterfaceController {
         super.willActivate()
     }
 
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
+    private func configureDecksTable() {
+        decksTable.setNumberOfRows(dataModel.decks.count, withRowType: "DeckRow")
+        
+        for (index, deck) in dataModel.decks.enumerate() {
+            let row = decksTable.rowControllerAtIndex(index) as! DeckRowController
+            row.deckName = deck.0
+        }
     }
 
 }
