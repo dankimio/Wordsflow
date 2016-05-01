@@ -144,6 +144,18 @@ extension AppDelegate: WCSessionDelegate {
 
     func session(session: WCSession, didReceiveUserInfo userInfo: [String : AnyObject]) {
         print("Received user info")
+        print(userInfo)
+        
+        dispatch_async(dispatch_get_main_queue()) {
+            let realm = try! Realm()
+            
+            guard let deck = realm.objects(Deck).filter("name == %@", userInfo["deck"] as! String).first else { return }
+            guard let card = deck.cards.filter("front == %@ AND back == %@", userInfo["front"] as! String, userInfo["back"] as! String).first else { return }
+            
+            if let quality = userInfo["quality"] as? Int {
+                Scheduler(card: card, quality: quality).schedule()
+            }
+        }
     }
 
 }
