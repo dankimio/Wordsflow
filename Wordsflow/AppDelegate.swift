@@ -41,9 +41,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If your application supports background execution,
         // this method is called instead of applicationWillTerminate: when the user quits.
 
-        print("DIDENTERBACKGROUND")
         scheduleNotification()
         syncData()
+        saveDataToAppGroup()
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
@@ -136,6 +136,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {
             print("Error updating context")
         }
+    }
+    
+    private func saveDataToAppGroup() {
+        let realm = try! Realm()
+        guard let userDefaults = NSUserDefaults(suiteName: "group.co.itsdn.Wordsflow") else { return }
+        
+        var decks = [String: Int]()
+        
+        for deck in realm.objects(Deck) {
+            decks[deck.name] = deck.dueCards.count
+        }
+        
+//        var decks = realm.objects(Deck).map { ["name": $0.name, "count": $0.dueCards.count] }
+        
+        userDefaults.setObject(decks, forKey: "decks")
+        userDefaults.setObject(NSDate(), forKey: "nextSession")
     }
 
 }

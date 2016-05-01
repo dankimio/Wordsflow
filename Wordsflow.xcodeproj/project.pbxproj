@@ -33,6 +33,10 @@
 		37703FA21CC9651E00A96980 /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37703FA11CC9651E00A96980 /* Scheduler.swift */; };
 		37703FA41CC9653500A96980 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37703FA31CC9653500A96980 /* Card.swift */; };
 		37703FA91CC9762B00A96980 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37703FA81CC9762B00A96980 /* Deck.swift */; };
+		3792C8C01CD680AC00CD85D4 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3792C8BF1CD680AC00CD85D4 /* NotificationCenter.framework */; };
+		3792C8C31CD680AC00CD85D4 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3792C8C21CD680AC00CD85D4 /* TodayViewController.swift */; };
+		3792C8C61CD680AC00CD85D4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3792C8C41CD680AC00CD85D4 /* MainInterface.storyboard */; };
+		3792C8CA1CD680AC00CD85D4 /* Wordsflow Today Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3792C8BE1CD680AC00CD85D4 /* Wordsflow Today Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		37ADCB141CD13A7300F93389 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ADCB131CD13A7300F93389 /* FinishViewController.swift */; };
 		37ADCB161CD171F400F93389 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ADCB151CD171F400F93389 /* OnboardingViewController.swift */; };
 		37ADCB191CD17C7D00F93389 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37ADCB171CD17C7D00F93389 /* Onboarding.storyboard */; };
@@ -65,6 +69,13 @@
 			remoteGlobalIDString = 373AAD3D1CD54B02000D4098;
 			remoteInfo = "Wordsflow WatchKit App";
 		};
+		3792C8C81CD680AC00CD85D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37703F801CC94A1E00A96980 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3792C8BD1CD680AC00CD85D4;
+			remoteInfo = "Wordsflow Today Extension";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -90,6 +101,17 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3792C8CE1CD680AC00CD85D4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3792C8CA1CD680AC00CD85D4 /* Wordsflow Today Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +122,8 @@
 		371650E21CC9A19800897E32 /* DeckCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckCell.swift; sourceTree = "<group>"; };
 		371650E41CCA27E400897E32 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		371BCD0E1CD1235D000ADF03 /* StudyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
+		372539E41CD6816F00FE77BE /* Wordsflow Today Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Wordsflow Today Extension.entitlements"; sourceTree = "<group>"; };
+		372539E51CD692FE00FE77BE /* Wordsflow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Wordsflow.entitlements; sourceTree = "<group>"; };
 		373AAD3E1CD54B02000D4098 /* Wordsflow WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wordsflow WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		373AAD411CD54B02000D4098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		373AAD431CD54B02000D4098 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,6 +148,11 @@
 		37703FA11CC9651E00A96980 /* Scheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
 		37703FA31CC9653500A96980 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		37703FA81CC9762B00A96980 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		3792C8BE1CD680AC00CD85D4 /* Wordsflow Today Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Wordsflow Today Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3792C8BF1CD680AC00CD85D4 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		3792C8C21CD680AC00CD85D4 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		3792C8C51CD680AC00CD85D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		3792C8C71CD680AC00CD85D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37ADCB131CD13A7300F93389 /* FinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
 		37ADCB151CD171F400F93389 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		37ADCB181CD17C7D00F93389 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Onboarding.storyboard; sourceTree = "<group>"; };
@@ -156,6 +185,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				40DD06B2BD8594DBF8F112A1 /* Pods_Wordsflow.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3792C8BB1CD680AC00CD85D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3792C8C01CD680AC00CD85D4 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +254,7 @@
 				37703F8A1CC94A1E00A96980 /* Wordsflow */,
 				373AAD3F1CD54B02000D4098 /* Wordsflow WatchKit App */,
 				373AAD4E1CD54B03000D4098 /* Wordsflow WatchKit App Extension */,
+				3792C8C11CD680AC00CD85D4 /* Wordsflow Today Extension */,
 				37703F891CC94A1E00A96980 /* Products */,
 				A11A47A12A47707DAB8044CF /* Pods */,
 				7DDD9B5B66FAB0217DB53C28 /* Frameworks */,
@@ -229,6 +267,7 @@
 				37703F881CC94A1E00A96980 /* Wordsflow.app */,
 				373AAD3E1CD54B02000D4098 /* Wordsflow WatchKit App.app */,
 				373AAD4A1CD54B03000D4098 /* Wordsflow WatchKit App Extension.appex */,
+				3792C8BE1CD680AC00CD85D4 /* Wordsflow Today Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -236,6 +275,7 @@
 		37703F8A1CC94A1E00A96980 /* Wordsflow */ = {
 			isa = PBXGroup;
 			children = (
+				372539E51CD692FE00FE77BE /* Wordsflow.entitlements */,
 				37703FA51CC975BC00A96980 /* Controllers */,
 				37703FA61CC975CC00A96980 /* Models */,
 				371650DF1CC99FBF00897E32 /* Views */,
@@ -286,6 +326,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3792C8C11CD680AC00CD85D4 /* Wordsflow Today Extension */ = {
+			isa = PBXGroup;
+			children = (
+				372539E41CD6816F00FE77BE /* Wordsflow Today Extension.entitlements */,
+				3792C8C21CD680AC00CD85D4 /* TodayViewController.swift */,
+				3792C8C41CD680AC00CD85D4 /* MainInterface.storyboard */,
+				3792C8C71CD680AC00CD85D4 /* Info.plist */,
+			);
+			path = "Wordsflow Today Extension";
+			sourceTree = "<group>";
+		};
 		37ADCB221CD26B0300F93389 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				A6A0F2E41E7B1718695E3B41 /* Pods_Wordsflow.framework */,
+				3792C8BF1CD680AC00CD85D4 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -360,16 +412,35 @@
 				3D49059521EAED197DD3BE75 /* 📦 Embed Pods Frameworks */,
 				8D7B690624F04C368CD4A276 /* 📦 Copy Pods Resources */,
 				373AAD681CD54B03000D4098 /* Embed Watch Content */,
+				3792C8CE1CD680AC00CD85D4 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				373AAD5F1CD54B03000D4098 /* PBXTargetDependency */,
+				3792C8C91CD680AC00CD85D4 /* PBXTargetDependency */,
 			);
 			name = Wordsflow;
 			productName = Wordsflow;
 			productReference = 37703F881CC94A1E00A96980 /* Wordsflow.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3792C8BD1CD680AC00CD85D4 /* Wordsflow Today Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3792C8CD1CD680AC00CD85D4 /* Build configuration list for PBXNativeTarget "Wordsflow Today Extension" */;
+			buildPhases = (
+				3792C8BA1CD680AC00CD85D4 /* Sources */,
+				3792C8BB1CD680AC00CD85D4 /* Frameworks */,
+				3792C8BC1CD680AC00CD85D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Wordsflow Today Extension";
+			productName = "Wordsflow Today Extension";
+			productReference = 3792C8BE1CD680AC00CD85D4 /* Wordsflow Today Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -389,6 +460,21 @@
 					};
 					37703F871CC94A1E00A96980 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = Z9SY9LHRWJ;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					3792C8BD1CD680AC00CD85D4 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = Z9SY9LHRWJ;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -408,6 +494,7 @@
 				37703F871CC94A1E00A96980 /* Wordsflow */,
 				373AAD3D1CD54B02000D4098 /* Wordsflow WatchKit App */,
 				373AAD491CD54B03000D4098 /* Wordsflow WatchKit App Extension */,
+				3792C8BD1CD680AC00CD85D4 /* Wordsflow Today Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -440,6 +527,14 @@
 				37ADCB241CD26B2E00F93389 /* world_capitals.json in Resources */,
 				37ADCB261CD2751C00F93389 /* us_capitals.json in Resources */,
 				37ADCB191CD17C7D00F93389 /* Onboarding.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3792C8BC1CD680AC00CD85D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3792C8C61CD680AC00CD85D4 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +632,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3792C8BA1CD680AC00CD85D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3792C8C31CD680AC00CD85D4 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -549,6 +652,11 @@
 			isa = PBXTargetDependency;
 			target = 373AAD3D1CD54B02000D4098 /* Wordsflow WatchKit App */;
 			targetProxy = 373AAD5E1CD54B03000D4098 /* PBXContainerItemProxy */;
+		};
+		3792C8C91CD680AC00CD85D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3792C8BD1CD680AC00CD85D4 /* Wordsflow Today Extension */;
+			targetProxy = 3792C8C81CD680AC00CD85D4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -575,6 +683,14 @@
 				37703F951CC94A1E00A96980 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3792C8C41CD680AC00CD85D4 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3792C8C51CD680AC00CD85D4 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 		37ADCB171CD17C7D00F93389 /* Onboarding.storyboard */ = {
@@ -738,6 +854,8 @@
 			baseConfigurationReference = 5CC3D62D1AE408C4DE7679D3 /* Pods-Wordsflow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Wordsflow/Wordsflow.entitlements;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Wordsflow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.itsdn.Wordsflow;
@@ -750,10 +868,36 @@
 			baseConfigurationReference = ADB8F62DF007090F57934863 /* Pods-Wordsflow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Wordsflow/Wordsflow.entitlements;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Wordsflow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.itsdn.Wordsflow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3792C8CB1CD680AC00CD85D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Wordsflow Today Extension/Wordsflow Today Extension.entitlements";
+				INFOPLIST_FILE = "Wordsflow Today Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.itsdn.Wordsflow.Wordsflow-Today-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3792C8CC1CD680AC00CD85D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Wordsflow Today Extension/Wordsflow Today Extension.entitlements";
+				INFOPLIST_FILE = "Wordsflow Today Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.itsdn.Wordsflow.Wordsflow-Today-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -792,6 +936,15 @@
 			buildConfigurations = (
 				37703F9B1CC94A1E00A96980 /* Debug */,
 				37703F9C1CC94A1E00A96980 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3792C8CD1CD680AC00CD85D4 /* Build configuration list for PBXNativeTarget "Wordsflow Today Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3792C8CB1CD680AC00CD85D4 /* Debug */,
+				3792C8CC1CD680AC00CD85D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
