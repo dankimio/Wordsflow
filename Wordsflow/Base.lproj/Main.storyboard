@@ -220,7 +220,6 @@
         <!--Study View Controller-->
         <scene sceneID="ric-xc-jU6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="daN-V7-hLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="rEP-Ff-bxv" customClass="StudyViewController" customModule="Wordsflow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rMp-W3-e6J"/>
@@ -401,6 +400,7 @@
                         <segue destination="lnG-6e-dbE" kind="presentation" identifier="ShowFinishView" id="KyC-Jy-L7F"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="daN-V7-hLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2885" y="1174"/>
         </scene>

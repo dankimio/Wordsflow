@@ -10,8 +10,13 @@ import UIKit
 
 class OnboardingPageViewController: UIViewController {
     
-    @IBAction func populate() {
+//    @IBAction func populate() {
+//        Populator().populate()
+//    }
+    @IBAction func populate(sender: RoundedButton) {
         Populator().populate()
+        sender.setTitle("Success", forState: .Normal)
+        sender.enabled = false
     }
     
     @IBAction func registerNotifications() {

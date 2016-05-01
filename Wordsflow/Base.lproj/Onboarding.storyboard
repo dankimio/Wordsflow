@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -77,17 +76,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="M4S-6c-OgN">
-                                <rect key="frame" x="52" y="158" width="496" height="139"/>
+                                <rect key="frame" x="54" y="158" width="493" height="139"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Populate with sample data" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqX-Zn-aan">
-                                        <rect key="frame" x="0.0" y="0.0" width="496" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="493" height="33"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0i-3X-j6i">
-                                        <rect key="frame" x="0.0" y="77" width="496" height="62"/>
-                                        <string key="text">Wordsflow comes with a sample set of decks that serves as an example. You can skip this step and start using your own decks with cards right away.</string>
+                                        <rect key="frame" x="0.0" y="77" width="493" height="62"/>
+                                        <string key="text">Wordsflow comes with a sample set of decks that serves as an example. You can skip this step and start using your own decks and cards right away.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -109,7 +108,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="populate" destination="2JK-GS-Xgk" eventType="touchUpInside" id="tUz-g1-3iZ"/>
+                                    <action selector="populate:" destination="2JK-GS-Xgk" eventType="touchUpInside" id="cCb-uH-mfN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -205,28 +204,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="WlD-4I-p2k">
-                                <rect key="frame" x="61" y="-17" width="479" height="462"/>
+                                <rect key="frame" x="43" y="193" width="515" height="97"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AE0-wS-6Ob">
-                                        <rect key="frame" x="0.0" y="0.0" width="479" height="300"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="AE0-wS-6Ob" secondAttribute="height" constant="1" id="epG-eB-e0u"/>
-                                            <constraint firstAttribute="height" constant="300" id="sfg-kl-a0z"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="epG-eB-e0u"/>
-                                            </mask>
-                                        </variation>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extensions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF6-x5-A2I">
-                                        <rect key="frame" x="0.0" y="344" width="479" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="515" height="33"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wordsflow comes with an Apple Watch app as well as Today View extension. " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vps-Lq-j18">
-                                        <rect key="frame" x="0.0" y="421" width="479" height="41"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wordsflow comes with an Apple Watch app and Today View extension. " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vps-Lq-j18">
+                                        <rect key="frame" x="0.0" y="77" width="515" height="20"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -234,7 +221,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNi-0A-crH" customClass="RoundedButton" customModule="Wordsflow" customModuleProvider="target">
-                                <rect key="frame" x="250" y="489" width="101" height="38"/>
+                                <rect key="frame" x="250" y="334" width="101" height="38"/>
                                 <inset key="contentEdgeInsets" minX="30" minY="10" maxX="30" maxY="10"/>
                                 <state key="normal" title="Finish">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -258,7 +245,7 @@
                             <constraint firstItem="WlD-4I-p2k" firstAttribute="centerX" secondItem="bYl-2t-azR" secondAttribute="centerX" id="Mip-CF-3Wm"/>
                             <constraint firstItem="WlD-4I-p2k" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bYl-2t-azR" secondAttribute="leadingMargin" constant="22" id="SmO-gF-T9b"/>
                             <constraint firstItem="WlD-4I-p2k" firstAttribute="centerY" secondItem="bYl-2t-azR" secondAttribute="centerY" multiplier="0.8" id="gVA-Bw-Rvo"/>
-                            <constraint firstItem="WlD-4I-p2k" firstAttribute="centerY" secondItem="bYl-2t-azR" secondAttribute="centerY" multiplier="0.8" id="jS8-wy-R3I"/>
+                            <constraint firstItem="WlD-4I-p2k" firstAttribute="centerY" secondItem="bYl-2t-azR" secondAttribute="centerY" multiplier="0.9" id="jS8-wy-R3I"/>
                             <constraint firstItem="XNi-0A-crH" firstAttribute="top" secondItem="WlD-4I-p2k" secondAttribute="bottom" constant="44" id="ofi-ea-UYy"/>
                             <constraint firstItem="XNi-0A-crH" firstAttribute="centerX" secondItem="bYl-2t-azR" secondAttribute="centerX" id="tXV-Zr-xj1"/>
                         </constraints>
@@ -326,7 +313,6 @@
         <!--Navigation Controller-->
         <scene sceneID="lNp-Ws-wmV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kS3-iS-Vdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="Onboarding" automaticallyAdjustsScrollViewInsets="NO" id="id7-RE-OZR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="bEK-3w-K9O">
@@ -339,6 +325,7 @@
                         <segue destination="I6L-S5-0WK" kind="relationship" relationship="rootViewController" id="j2y-5r-iRB"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kS3-iS-Vdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1138" y="473"/>
         </scene>

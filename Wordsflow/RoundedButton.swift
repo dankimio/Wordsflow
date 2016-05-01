@@ -17,7 +17,7 @@ class RoundedButton: UIButton {
         }
     }
     
-    @IBInspectable var highlightedColor: UIColor = UIColor.redColor() {
+    @IBInspectable var highlightedColor: UIColor = UIColor(red: 10 / 255, green: 70 / 255, blue: 160 / 255, alpha: 1) {
         didSet {
             if highlighted { layer.backgroundColor = highlightedColor.CGColor }
         }
