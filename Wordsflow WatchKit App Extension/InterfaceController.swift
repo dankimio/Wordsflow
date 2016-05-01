@@ -16,29 +16,23 @@ class InterfaceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
-        // Configure interface objects here.
+
         configureDecksTable()
-    }
-
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
-
-    private func configureDecksTable() {
-        decksTable.setNumberOfRows(dataModel.decks.count, withRowType: "DeckRow")
-        
-        for (index, deck) in dataModel.decks.enumerate() {
-            let row = decksTable.rowControllerAtIndex(index) as! DeckRowController
-            row.name = deck.name
-        }
     }
 
     override func contextForSegueWithIdentifier(segueIdentifier: String,
                                                 inTable table: WKInterfaceTable,
                                                 rowIndex: Int) -> AnyObject? {
         return dataModel.decks[rowIndex]
+    }
+
+    private func configureDecksTable() {
+        decksTable.setNumberOfRows(dataModel.decks.count, withRowType: "DeckRow")
+
+        for (index, deck) in dataModel.decks.enumerate() {
+            let row = decksTable.rowControllerAtIndex(index) as! DeckRowController
+            row.name = deck.name
+        }
     }
 
 }

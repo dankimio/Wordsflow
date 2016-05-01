@@ -21,15 +21,17 @@ class StudyInterfaceController: WKInterfaceController {
         super.awakeWithContext(context)
 
         deck = context as! Deck
+
         configureCurrentCard()
     }
 
     override func willActivate() {
         super.willActivate()
 
-        if currentCard == nil {
+        if let card = currentCard {
+            frontLabel.setText(card.front)
+        } else {
             popController()
-            return
         }
     }
 
@@ -41,14 +43,11 @@ class StudyInterfaceController: WKInterfaceController {
     }
 
     private func configureCurrentCard() {
-        guard let card = deck.cards.first else {
-            frontLabel.setText("")
+        if let card = deck.cards.first {
+            currentCard = card
+        } else {
             currentCard = nil
-            return
         }
-
-        currentCard = card
-        frontLabel.setText(card.front)
     }
 
 }
