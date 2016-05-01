@@ -25,13 +25,17 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
+    
+    override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
+        let deck = dataModel.decks[rowIndex]
+    }
 
     private func configureDecksTable() {
         decksTable.setNumberOfRows(dataModel.decks.count, withRowType: "DeckRow")
         
         for (index, deck) in dataModel.decks.enumerate() {
             let row = decksTable.rowControllerAtIndex(index) as! DeckRowController
-            row.deckName = deck.0
+            row.name = deck.name
         }
     }
 

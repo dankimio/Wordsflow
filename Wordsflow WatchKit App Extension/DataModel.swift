@@ -8,6 +8,19 @@
 
 import Foundation
 
+class Deck {
+    
+    var name: String
+    var cards: [Card]
+
+
+    init(name: String, cards: [Card]) {
+        self.name = name
+        self.cards = cards
+    }
+
+}
+
 class Card {
     
     var front: String
@@ -22,13 +35,20 @@ class Card {
 
 class DataModel {
     
-    var decks: [String: [Card]]
+    var decks: [Deck]
     
     init() {
-        decks = [
-            "Lorem": [Card(front: "Hello", back: "World"), Card(front: "A", back: "B")],
-            "Ipsum": [Card(front: "Lalka", back: "Lolol"), Card(front: "Hey", back: "Kek")]
-        ]
+        var myDecks = [Deck]()
+        for index in 1...3 {
+            let cards = [
+                Card(front: "Lorem", back: "Ipsum"),
+                Card(front: "Dolor", back: "Sit")
+            ]
+            let deck = Deck(name: "Deck \(index)", cards: cards)
+            myDecks.append(deck)
+        }
+
+        decks = myDecks
     }
     
 }

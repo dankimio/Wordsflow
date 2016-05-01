@@ -10,13 +10,12 @@ import WatchKit
 
 class DeckRowController: NSObject {
     
-    @IBOutlet weak var deckNameLabel: WKInterfaceLabel!
+    @IBOutlet weak var nameLabel: WKInterfaceLabel!
     
-    var deckName: String! {
+    var name: String! {
         didSet {
-            if let name = deckName {
-                deckNameLabel.setText(name)
-            }
+            guard let name = name else { return }
+            nameLabel.setText(name)
         }
     }
 
