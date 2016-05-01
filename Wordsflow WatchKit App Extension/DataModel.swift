@@ -36,23 +36,28 @@ class Card {
 
 class DataModel {
     
-    var decks: [Deck]
+    var decks = [Deck]()
     
     init() {
-        var myDecks = [Deck]()
-        for index in 1...3 {
-            let cards = [
-                Card(front: "Lorem", back: "Ipsum"),
-                Card(front: "Dolor", back: "Sit")
-            ]
-            let deck = Deck(name: "Deck \(index)", cards: cards)
-            myDecks.append(deck)
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+
+        guard let context = userDefaults.arrayForKey("decks") else {
+            decks = [Deck]()
+            return
         }
 
-        let emptyDeck = Deck(name: "Deck empty", cards: [])
-        myDecks.append(emptyDeck)
+        for deck in context {
+            let savedCards = deck["cards"] as! NSArray
+            var cards = [Card]()
+            for card in savedCards {
+                if let card = card as? [String: AnyObject] {
+                    cards.append(Card(front: card["front"] as! String, back: card["back"] as! String))
+                }
+            }
 
-        decks = myDecks
+            let savedDeck = Deck(name: deck["name"] as! String, cards: cards)
+            decks.append(savedDeck)
+        }
     }
     
 }
