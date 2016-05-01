@@ -33,30 +33,33 @@
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Study-->
         <scene sceneID="Eoi-kH-WQ9">
             <objects>
-                <controller id="paa-Nc-tOM">
+                <controller identifier="Study" id="paa-Nc-tOM" customClass="StudyInterfaceController" customModule="Wordsflow_WatchKit_App_Extension">
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" id="QaS-e5-9hu">
                             <items>
-                                <label alignment="center" text="Label" id="Lqg-nB-uM2"/>
+                                <label alignment="center" text="Front" id="Lqg-nB-uM2"/>
                                 <button width="1" alignment="left" verticalAlignment="bottom" title="Show Answer" id="UvJ-Ot-omS">
                                     <connections>
-                                        <segue destination="tfZ-eO-eIP" kind="modal" id="63e-oD-BIJ"/>
+                                        <segue destination="tfZ-eO-eIP" kind="modal" identifier="ShowAnswer" id="63e-oD-BIJ"/>
                                     </connections>
                                 </button>
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="frontLabel" destination="Lqg-nB-uM2" id="H5P-yC-pu4"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="505" y="347"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Answer-->
         <scene sceneID="Y2a-HC-gSb">
             <objects>
-                <controller id="tfZ-eO-eIP">
+                <controller identifier="Answer" id="tfZ-eO-eIP" customClass="AnswerInterfaceController" customModule="Wordsflow_WatchKit_App_Extension">
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" id="MmT-Am-mbc">
                             <items>
@@ -69,14 +72,30 @@
                                     <items>
                                         <group width="1" alignment="left" id="BSs-7M-bM3">
                                             <items>
-                                                <button width="0.5" alignment="left" title="Again" id="KM8-Jp-dH6"/>
-                                                <button width="0.5" alignment="left" title="Hard" id="TvB-eC-hY2"/>
+                                                <button width="0.5" alignment="left" title="Again" id="KM8-Jp-dH6">
+                                                    <connections>
+                                                        <action selector="answerAgain" destination="tfZ-eO-eIP" id="LPk-Ad-Jt9"/>
+                                                    </connections>
+                                                </button>
+                                                <button width="0.5" alignment="left" title="Hard" id="TvB-eC-hY2">
+                                                    <connections>
+                                                        <action selector="answerHard" destination="tfZ-eO-eIP" id="LQD-Rf-PCg"/>
+                                                    </connections>
+                                                </button>
                                             </items>
                                         </group>
                                         <group width="1" alignment="left" id="pqx-3k-syC">
                                             <items>
-                                                <button width="0.5" alignment="left" title="Good" id="pps-de-ASA"/>
-                                                <button width="0.5" alignment="left" title="Easy" id="Bnf-vv-aid"/>
+                                                <button width="0.5" alignment="left" title="Good" id="pps-de-ASA">
+                                                    <connections>
+                                                        <action selector="answerGood" destination="tfZ-eO-eIP" id="9dO-Je-CjO"/>
+                                                    </connections>
+                                                </button>
+                                                <button width="0.5" alignment="left" title="Easy" id="Bnf-vv-aid">
+                                                    <connections>
+                                                        <action selector="answerEasy" destination="tfZ-eO-eIP" id="ufV-jv-ain"/>
+                                                    </connections>
+                                                </button>
                                             </items>
                                         </group>
                                     </items>
@@ -84,6 +103,9 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="backLabel" destination="2Wj-ah-j7w" id="E3G-8C-EcA"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="770" y="347"/>

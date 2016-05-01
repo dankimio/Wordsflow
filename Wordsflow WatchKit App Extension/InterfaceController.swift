@@ -25,10 +25,6 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
-    
-    override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
-        let deck = dataModel.decks[rowIndex]
-    }
 
     private func configureDecksTable() {
         decksTable.setNumberOfRows(dataModel.decks.count, withRowType: "DeckRow")
@@ -37,6 +33,12 @@ class InterfaceController: WKInterfaceController {
             let row = decksTable.rowControllerAtIndex(index) as! DeckRowController
             row.name = deck.name
         }
+    }
+
+    override func contextForSegueWithIdentifier(segueIdentifier: String,
+                                                inTable table: WKInterfaceTable,
+                                                rowIndex: Int) -> AnyObject? {
+        return dataModel.decks[rowIndex]
     }
 
 }

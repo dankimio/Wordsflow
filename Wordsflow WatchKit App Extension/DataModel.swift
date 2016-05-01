@@ -9,7 +9,7 @@
 import Foundation
 
 class Deck {
-    
+
     var name: String
     var cards: [Card]
 
@@ -25,12 +25,13 @@ class Card {
     
     var front: String
     var back: String
+    var studiedAt: NSDate?
     
     init(front: String, back: String) {
         self.front = front
         self.back = back
     }
-    
+
 }
 
 class DataModel {
@@ -47,6 +48,9 @@ class DataModel {
             let deck = Deck(name: "Deck \(index)", cards: cards)
             myDecks.append(deck)
         }
+
+        let emptyDeck = Deck(name: "Deck empty", cards: [])
+        myDecks.append(emptyDeck)
 
         decks = myDecks
     }
