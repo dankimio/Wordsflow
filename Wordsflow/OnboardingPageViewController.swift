@@ -9,7 +9,7 @@
 import UIKit
 
 class OnboardingPageViewController: UIViewController {
-    
+
 //    @IBAction func populate() {
 //        Populator().populate()
 //    }
@@ -18,11 +18,11 @@ class OnboardingPageViewController: UIViewController {
         sender.setTitle("Success", forState: .Normal)
         sender.enabled = false
     }
-    
+
     @IBAction func registerNotifications() {
         let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound],
                                                               categories: nil)
         UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
     }
-    
+
 }

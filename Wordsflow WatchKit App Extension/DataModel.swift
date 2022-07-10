@@ -22,11 +22,11 @@ class Deck {
 }
 
 class Card {
-    
+
     var front: String
     var back: String
     var studiedAt: NSDate?
-    
+
     init(front: String, back: String) {
         self.front = front
         self.back = back
@@ -35,9 +35,9 @@ class Card {
 }
 
 class DataModel {
-    
+
     var decks = [Deck]()
-    
+
     init() {
         let userDefaults = NSUserDefaults.standardUserDefaults()
 
@@ -59,5 +59,5 @@ class DataModel {
             decks.append(savedDeck)
         }
     }
-    
+
 }

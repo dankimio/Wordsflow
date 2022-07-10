@@ -10,20 +10,20 @@ import Foundation
 import RealmSwift
 
 class CardManager {
-    
+
     static let sharedInstance = CardManager()
-    
+
     private let realm = try! Realm()
     private init() { }
-    
+
     var dueToday: Results<Card> {
         return realm.objects(Card).filter("dueDate < %@", NSDate())
     }
-    
+
     var dueLater: Results<Card> {
         return realm.objects(Card)
             .filter("dueDate > %@", NSDate())
             .sorted("dueDate", ascending: true)
     }
-    
+
 }

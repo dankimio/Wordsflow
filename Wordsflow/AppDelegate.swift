@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configureRealm()
         configureSession()
         cancelNotifications()
-        
+
         return true
     }
 
@@ -61,7 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate.
         // Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
+
     private func configureRealm() {
         Realm.Configuration.defaultConfiguration = Realm.Configuration(
             schemaVersion: 1,
@@ -70,29 +70,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         )
     }
-    
+
     private func scheduleNotification() {
         let cardManager = CardManager.sharedInstance
-        
+
         guard let scheduledNotifications = UIApplication
             .sharedApplication()
             .scheduledLocalNotifications where scheduledNotifications.isEmpty else {
-            
+
             return
         }
-        
+
         if !cardManager.dueToday.isEmpty {
             let tomorrow = NSDate().dateByAddingUnit(.Day, value: 1)
             scheduleNotification(forDate: tomorrow)
             return
         }
-        
+
         if let card = cardManager.dueLater.first {
             scheduleNotification(forDate: card.dueDate)
             return
         }
     }
-    
+
     private func scheduleNotification(forDate date: NSDate) {
         let notification = UILocalNotification()
         notification.fireDate = date
@@ -100,12 +100,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         notification.alertBody = "Time to review your cards"
         notification.applicationIconBadgeNumber = 1
         notification.soundName = UILocalNotificationDefaultSoundName
-        
+
         print("Scheduling notification: \(notification)")
-        
+
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
-    
+
     private func cancelNotifications() {
         print("Cancelling notifications")
 
@@ -137,19 +137,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Error updating context")
         }
     }
-    
+
     private func saveDataToAppGroup() {
         let realm = try! Realm()
         guard let userDefaults = NSUserDefaults(suiteName: "group.co.itsdn.Wordsflow") else { return }
-        
+
         var decks = [String: Int]()
-        
+
         for deck in realm.objects(Deck) {
             decks[deck.name] = deck.dueCards.count
         }
-        
+
 //        var decks = realm.objects(Deck).map { ["name": $0.name, "count": $0.dueCards.count] }
-        
+
         userDefaults.setObject(decks, forKey: "decks")
         userDefaults.setObject(NSDate(), forKey: "nextSession")
     }
@@ -161,13 +161,13 @@ extension AppDelegate: WCSessionDelegate {
     func session(session: WCSession, didReceiveUserInfo userInfo: [String : AnyObject]) {
         print("Received user info")
         print(userInfo)
-        
+
         dispatch_async(dispatch_get_main_queue()) {
             let realm = try! Realm()
-            
+
             guard let deck = realm.objects(Deck).filter("name == %@", userInfo["deck"] as! String).first else { return }
             guard let card = deck.cards.filter("front == %@ AND back == %@", userInfo["front"] as! String, userInfo["back"] as! String).first else { return }
-            
+
             if let quality = userInfo["quality"] as? Int {
                 Scheduler(card: card, quality: quality).schedule()
             }

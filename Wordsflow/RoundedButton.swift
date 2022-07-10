@@ -16,29 +16,29 @@ class RoundedButton: UIButton {
             layer.backgroundColor = defaultColor.CGColor
         }
     }
-    
+
     @IBInspectable var highlightedColor: UIColor = UIColor(red: 10 / 255, green: 70 / 255, blue: 160 / 255, alpha: 1) {
         didSet {
             if highlighted { layer.backgroundColor = highlightedColor.CGColor }
         }
     }
-    
+
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet { layer.cornerRadius = cornerRadius }
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
+
         layer.backgroundColor = defaultColor.CGColor
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+
         layer.backgroundColor = defaultColor.CGColor
     }
-    
+
     override var highlighted: Bool {
         didSet {
             layer.backgroundColor = highlighted ? highlightedColor.CGColor : defaultColor.CGColor

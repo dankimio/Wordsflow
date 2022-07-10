@@ -11,9 +11,9 @@ import WatchKit
 class InterfaceController: WKInterfaceController {
 
     @IBOutlet var decksTable: WKInterfaceTable!
-    
+
     var dataModel = DataModel()
-    
+
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
 

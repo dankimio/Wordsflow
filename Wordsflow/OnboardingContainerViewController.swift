@@ -13,14 +13,14 @@ class OnboardingContainerViewController: UIViewController {
     @IBAction func skip() {
         dismissOnboarding()
     }
-    
+
     @IBAction func finish(segue: UIStoryboardSegue) {
         dismissOnboarding()
     }
-    
+
     private func dismissOnboarding() {
         Settings.sharedInstance.firstLaunch = false
         dismissViewControllerAnimated(true, completion: nil)
     }
-    
+
 }

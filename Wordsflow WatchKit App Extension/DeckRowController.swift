@@ -9,9 +9,9 @@
 import WatchKit
 
 class DeckRowController: NSObject {
-    
+
     @IBOutlet weak var nameLabel: WKInterfaceLabel!
-    
+
     var name: String! {
         didSet {
             guard let name = name else { return }

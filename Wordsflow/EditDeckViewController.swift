@@ -18,25 +18,25 @@ class EditDeckViewController: UITableViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
-    
+
     let realm = try! Realm()
     var delegate: EditDeckViewControllerDelegate?
     var deckToEdit: Deck?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         if let deck = deckToEdit {
             nameTextField.text = deck.name
             doneBarButton.enabled = true
         }
-        
+
         nameTextField.becomeFirstResponder()
     }
-    
+
     @IBAction func done() {
         let name = nameTextField.text!
-        
+
         if let deck = deckToEdit {
             try! realm.write { deck.name = name }
             delegate?.editDeckViewController(self, didFinishEditingDeck: deck)
@@ -46,10 +46,10 @@ class EditDeckViewController: UITableViewController {
             try! realm.write { realm.add(deck) }
             delegate?.editDeckViewController(self, didFinishAddingDeck: deck)
         }
-        
+
         dismissViewControllerAnimated(true, completion: nil)
     }
-    
+
     @IBAction func cancel() {
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -57,18 +57,18 @@ class EditDeckViewController: UITableViewController {
 }
 
 extension EditDeckViewController: UITextFieldDelegate {
-    
+
     func textField(textField: UITextField,
                    shouldChangeCharactersInRange range: NSRange,
                    replacementString string: String) -> Bool {
-        
+
         let oldText: NSString = textField.text!
         let newText: NSString = oldText.stringByReplacingCharactersInRange(range,
                                                                            withString: string)
-        
+
         doneBarButton.enabled = newText.length > 0
-        
+
         return true
     }
-    
+
 }

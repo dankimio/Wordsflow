@@ -9,7 +9,7 @@
 import UIKit
 
 class DeckDetailViewController: UIViewController {
-    
+
     @IBOutlet weak var dueCountLabel: UILabel!
     @IBOutlet weak var totalCountLabel: UILabel!
 
@@ -28,7 +28,7 @@ class DeckDetailViewController: UIViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         guard let identifier = segue.identifier else { return }
-        
+
         switch identifier {
         case "ShowCards":
             let cardsViewController = segue.destinationViewController as! CardsViewController
