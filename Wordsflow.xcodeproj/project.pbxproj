@@ -405,14 +405,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37703F9A1CC94A1E00A96980 /* Build configuration list for PBXNativeTarget "Wordsflow" */;
 			buildPhases = (
+				CD03C4ED73AE6E35DC436488 /* [CP] Check Pods Manifest.lock */,
 				D1F32FB22B214586D5DE25D1 /* 📦 Check Pods Manifest.lock */,
 				37703F841CC94A1E00A96980 /* Sources */,
 				37703F851CC94A1E00A96980 /* Frameworks */,
 				37703F861CC94A1E00A96980 /* Resources */,
 				3D49059521EAED197DD3BE75 /* 📦 Embed Pods Frameworks */,
-				8D7B690624F04C368CD4A276 /* 📦 Copy Pods Resources */,
 				373AAD681CD54B03000D4098 /* Embed Watch Content */,
 				3792C8CE1CD680AC00CD85D4 /* Embed App Extensions */,
+				C8CA77520652C565DAF9BB40 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -483,6 +484,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -556,19 +558,46 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wordsflow/Pods-Wordsflow-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8D7B690624F04C368CD4A276 /* 📦 Copy Pods Resources */ = {
+		C8CA77520652C565DAF9BB40 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wordsflow/Pods-Wordsflow-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wordsflow/Pods-Wordsflow-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wordsflow/Pods-Wordsflow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD03C4ED73AE6E35DC436488 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wordsflow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D1F32FB22B214586D5DE25D1 /* 📦 Check Pods Manifest.lock */ = {
@@ -857,9 +886,11 @@
 				CODE_SIGN_ENTITLEMENTS = Wordsflow/Wordsflow.entitlements;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Wordsflow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.itsdn.Wordsflow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -871,9 +902,11 @@
 				CODE_SIGN_ENTITLEMENTS = Wordsflow/Wordsflow.entitlements;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Wordsflow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.itsdn.Wordsflow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
