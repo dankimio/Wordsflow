@@ -1,3 +1,3 @@
 # Wordsflow
 
-Spaced-repetition (flashcards) app written in Swift.
+A flashcards app written in Swift.
